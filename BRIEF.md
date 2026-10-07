@@ -18,7 +18,35 @@ Der Makler lädt eine einfache PDF mit den Eckdaten des Objekts hoch. Das Tool l
 - **Bearbeitungen nach dem Kauf:** Ein gekauftes Exposé kann danach noch **3-mal bearbeitet** und jeweils erneut heruntergeladen werden.
 - **Wasserzeichen:** Die Vorschau ist immer mit einem Wasserzeichen versehen. Erst nach der Bezahlung ist das PDF ohne Wasserzeichen verfügbar.
 
-## 4. Konto
+## 4. Seitenstruktur
+
+| Bereich | Seite | Zugang |
+|---|---|---|
+| Öffentlich | **Landingpage** (Startseite, als Verkaufs-Funnel aufgebaut) | alle |
+| Öffentlich | Beispiel-Exposés (Galerie der Stilrichtungen) | alle |
+| Öffentlich | Preise (eigene Seite oder Sektion der Landingpage) | alle |
+| Öffentlich | Registrierung / Anmeldung / Passwort vergessen | alle |
+| Öffentlich | Impressum, Datenschutz, AGB, Widerrufsbelehrung | alle |
+| Konto | Dashboard / Exposé-Übersicht | angemeldet |
+| Konto | **Exposé-Wizard** (6 Schritte) | angemeldet |
+| Konto | Makler-Profil & Hausstil | angemeldet |
+| Konto | Rechnungen & Abo-Verwaltung | angemeldet |
+
+Inhalte, Texte und Aufbau der Landingpage stehen in **`LANDINGPAGE.md`**.
+
+## 5. Nutzerfluss
+
+1. Besucher landet auf der **Landingpage**.
+2. Klick auf **„Jetzt Exposé erstellen“**. Der Button steht oben in der Navigation, ist immer sichtbar und wird in mehreren Sektionen wiederholt.
+3. **Registrierung**, oder **Anmeldung** wenn bereits ein Konto besteht.
+   - Registrierung so kurz wie möglich: E-Mail + Passwort (optional: Anmeldung mit Google).
+   - Keine Zahlungsdaten bei der Registrierung.
+   - Weitere Angaben (Logo, Kontaktdaten, Firma) werden erst später im Wizard bzw. Profil abgefragt.
+4. Direkt danach startet der **Wizard bei Schritt 1** mit einem neuen Exposé-Entwurf. Es gibt keinen Umweg über das Dashboard.
+5. Bereits angemeldete Nutzer landen mit „Jetzt Exposé erstellen“ direkt im Wizard. Über die Navigation erreichen sie ihr Dashboard.
+6. Bezahlung erst beim Download (Schritt 6).
+
+## 6. Konto
 
 Ein Konto ist Pflicht, damit Makler zu ihren Exposés zurückkehren, sie bearbeiten und erneut herunterladen können.
 
@@ -30,7 +58,7 @@ Das Konto enthält:
 - **Rechnungen:** Übersicht und Download aller Rechnungen
 - **Abo-Verwaltung:** sobald das Abo-Modell feststeht
 
-## 5. Exposé-Wizard
+## 7. Exposé-Wizard
 
 Ein Exposé wird über einen Wizard in 6 Schritten erstellt.
 
@@ -135,14 +163,14 @@ Drei Möglichkeiten:
 - Nach erfolgreicher Bezahlung: Download des Exposés als PDF (DIN A4) ohne Wasserzeichen
 - Rechnung wird automatisch erstellt und im Konto abgelegt.
 
-## 6. Nach dem Kauf
+## 8. Nach dem Kauf
 
 - Das gekaufte Exposé bleibt im Konto gespeichert.
 - Es kann **3-mal** bearbeitet und anschließend jeweils neu heruntergeladen werden.
 - Die Anzahl der verbleibenden Bearbeitungen ist jederzeit sichtbar.
 - Ist das Kontingent aufgebraucht, ist das Exposé nur noch herunterladbar, nicht mehr bearbeitbar.
 
-## 7. Das fertige Exposé
+## 9. Das fertige Exposé
 
 - Format: PDF, DIN A4
 - Inhalte (je nach Angaben):
@@ -159,7 +187,7 @@ Drei Möglichkeiten:
 - Das Design folgt dem gewählten Stil, den Farben und den Schriften.
 - Die Vorschau entspricht exakt dem späteren PDF (bis auf das Wasserzeichen).
 
-## 8. Offene Punkte
+## 10. Offene Punkte
 
 - Ausgestaltung des Abo-Modells (Umfang, Stufen, Preise, Bearbeitungsregeln im Abo)
 - Was gilt nach Ablauf der 3 Bearbeitungen (z. B. erneuter Kauf)?

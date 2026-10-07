@@ -83,7 +83,19 @@ Statusfarben folgen demselben Prinzip: kleiner Punkt (8 px) + Text, z. B. Grün 
 | Daten / Datum / Code | **Geist Mono** (300 / 500) | Für Zahlen, Datumsangaben („OCT 6, 2026“), Tags |
 
 Gellix ist eine kommerzielle Schrift (Lizenz nötig). Geist Sans und Geist Mono sind frei verfügbar (OFL).
-Für expose.ai: entweder Gellix lizenzieren oder eine frei verfügbare geometrische Grotesk mit ähnlichem Charakter als Display-Schrift wählen. Geist Sans für UI kann direkt übernommen werden.
+
+### Schriften für expose.ai (festgelegt)
+
+| Rolle | Schrift | Lizenz |
+|---|---|---|
+| Display / Headlines | **Plus Jakarta Sans** (Medium 500) | OFL, Google Fonts |
+| UI / Fließtext | **Geist Sans** (400 / 500) | OFL |
+| Daten / Datum / Zahlen | **Geist Mono** (300 / 500) | OFL |
+
+**Warum Plus Jakarta Sans statt Gellix:** Im direkten Vergleich mit dem Gumloop-Hero kommt sie Gellix am nächsten: zweistöckiges „a“, einstöckiges, rundes „g“, offene Rundungen und eine leicht breite, freundliche Proportion. Getestet wurden außerdem Figtree, Outfit, Urbanist, Manrope, Onest, Instrument Sans und Albert Sans.
+**Ausweichoption:** **Figtree** – etwas schmaler und neutraler, ebenfalls OFL.
+
+Für die Plattform-UI gelten nur diese drei Schriften. Die kuratierten Schriften für die *Exposés* sind davon unabhängig.
 
 ### Typo-Skala (Desktop)
 
