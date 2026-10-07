@@ -5,6 +5,25 @@ Referenz: **gumloop.com** – analysiert am 07.10.2026 anhand von Screenshots (D
 
 > Gilt für die **Plattform**, nicht für die generierten Exposés. Die Exposés haben ihre eigene Gestaltung (Stil, Farben, Schrift des Maklers).
 
+## 0. Verbindliche Marke & Tokens
+
+Dieses Dokument ist die **Stil-Analyse der Referenz**. Verbindlich für expose.ai sind:
+
+| Datei | Inhalt |
+|---|---|
+| `brand/expose-ai-brand-guidelines.pdf` | Ausführliche Brand Guideline (Markenkern, Tonalität, Logo, Farben, Typo, Raster, Bildsprache, Social Media, Ads, Tokens) |
+| `brand/tokens.css` | Design Tokens als CSS-Variablen – **Single Source of Truth** |
+| `brand/tokens.json` | Dieselben Tokens maschinenlesbar (z. B. für Figma / Tailwind) |
+| `brand/brand-guidelines.html` | Quelle des PDFs; nach Änderungen neu rendern |
+
+Wo die Gumloop-Werte unten von den Tokens abweichen, **gelten die Tokens**. Die wichtigsten Unterschiede:
+
+- **Eigene Farben:** Ink `#141518`, Papier `#FFFFFF`, Sand `#F4EFE6`, Signaturfarbe **Ziegel `#E9562C`**. Gumloops bunte Akzentpalette wird nicht übernommen.
+- **Schriften:** Plus Jakarta Sans (Display), Geist (Text/UI), Geist Mono (Daten).
+- **Abstände:** festes 4-px-System (`--space-*`).
+- **Fokusring:** Ziegel statt Blau.
+- Die monochrome UI-Logik, Haarlinien, leisen Schatten und Radien bleiben wie unten beschrieben.
+
 ---
 
 ## 1. Charakter in einem Satz

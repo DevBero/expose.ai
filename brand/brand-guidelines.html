@@ -1,0 +1,1546 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>expose.ai – Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+@page { size: 297mm 210mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #fff; color: var(--text-primary); font-family: var(--font-text); font-size: 10.5pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; page-break-after: always; break-after: page; padding: 18mm 20mm 20mm; display: flex; flex-direction: column; }
+.page:last-child { page-break-after: auto; }
+.page.dark { background: var(--color-ink); color: #fff; }
+.page.sand { background: var(--color-sand); }
+.page.ziegel { background: var(--color-ziegel); color: var(--color-ink); }
+
+/* Kopf / Fuß */
+.foot { position: absolute; left: 20mm; right: 20mm; bottom: 9mm; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 7.5pt; color: var(--neutral-500); letter-spacing: .04em; text-transform: uppercase; }
+.dark .foot { color: var(--neutral-400); }
+.eyebrow { font-family: var(--font-mono); font-size: 8pt; letter-spacing: .08em; text-transform: uppercase; color: var(--neutral-500); margin-bottom: 4mm; display: flex; gap: 3mm; align-items: center; }
+.eyebrow b { color: var(--color-ziegel); font-weight: 500; }
+.dark .eyebrow { color: var(--neutral-400); }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.025em; }
+h1 { font-size: 44pt; line-height: 1.02; }
+h2 { font-size: 26pt; line-height: 1.12; margin-bottom: 6mm; max-width: 200mm; }
+h3 { font-size: 13pt; line-height: 1.25; letter-spacing: -0.015em; margin-bottom: 2mm; }
+h4 { font-size: 10.5pt; letter-spacing: -0.01em; margin-bottom: 1.5mm; }
+p { color: var(--text-secondary); max-width: 150mm; }
+.dark p { color: rgb(255 255 255 / .7); }
+p + p { margin-top: 2.5mm; }
+.lead { font-size: 12.5pt; line-height: 1.5; color: var(--text-secondary); max-width: 170mm; }
+.dark .lead { color: rgb(255 255 255 / .72); }
+.small { font-size: 8.5pt; line-height: 1.45; }
+.mono { font-family: var(--font-mono); }
+.muted { color: var(--text-tertiary); }
+.accent { color: var(--ziegel-600); }
+strong { color: var(--text-primary); font-weight: 600; }
+.dark strong { color: #fff; }
+ul.list { list-style: none; color: var(--text-secondary); }
+ul.list li { padding-left: 5mm; position: relative; margin: 1.2mm 0; }
+ul.list li::before { content: ""; position: absolute; left: 0; top: 2.3mm; width: 2mm; height: 2mm; background: var(--color-ziegel); border-radius: 1px; }
+.dark ul.list { color: rgb(255 255 255 / .72); }
+
+.grow { flex: 1; }
+.row { display: flex; gap: 8mm; }
+.col { flex: 1; min-width: 0; }
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+.g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; }
+.g5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; }
+.g6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4mm; }
+.mt2 { margin-top: 2mm; } .mt4 { margin-top: 4mm; } .mt6 { margin-top: 6mm; } .mt8 { margin-top: 8mm; } .mt10 { margin-top: 10mm; }
+.card { border: 1px solid var(--border-hairline); border-radius: var(--radius-xl); padding: 5mm; background: #fff; }
+.card.subtle { background: var(--surface-subtle); border-color: transparent; }
+.dark .card { background: rgb(255 255 255 / .05); border-color: rgb(255 255 255 / .14); }
+.num { font-family: var(--font-display); font-size: 28pt; font-weight: 300; letter-spacing: -0.02em; line-height: 1; }
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 7pt; letter-spacing: .05em; text-transform: uppercase; padding: .6mm 2mm; border-radius: var(--radius-full); border: 1px solid var(--border-hairline); color: var(--text-secondary); }
+.tag.do { background: var(--color-success-bg); color: var(--color-success); border-color: transparent; }
+.tag.dont { background: var(--color-error-bg); color: var(--color-error); border-color: transparent; }
+.ph { color: var(--ziegel-700); background: var(--ziegel-50); border-radius: 3px; padding: 0 1.2mm; font-family: var(--font-mono); font-size: .86em; }
+.dark .ph { background: rgb(233 86 44 / .18); color: var(--ziegel-200); }
+
+table { width: 100%; border-collapse: collapse; font-size: 8.8pt; }
+th { text-align: left; font-family: var(--font-mono); font-weight: 500; font-size: 7pt; text-transform: uppercase; letter-spacing: .06em; color: var(--neutral-500); padding: 1.8mm 2.5mm; border-bottom: 1px solid var(--border-strong); }
+td { padding: 2mm 2.5mm; border-bottom: 1px solid var(--border-hairline); vertical-align: top; color: var(--text-secondary); }
+td:first-child { color: var(--text-primary); font-weight: 500; }
+.dark th { color: var(--neutral-400); border-color: rgb(255 255 255 / .25); }
+.dark td { color: rgb(255 255 255 / .72); border-color: rgb(255 255 255 / .12); }
+.dark td:first-child { color: #fff; }
+
+/* Logo */
+.logo { display: inline-flex; align-items: center; gap: .32em; font-family: var(--font-display); font-weight: 600; letter-spacing: -0.035em; line-height: 1; color: var(--color-ink); }
+.logo svg { height: 1.08em; width: auto; flex: none; }
+.logo .dot { color: var(--color-ziegel); }
+.logo.inv { color: #fff; }
+.logo.inv, .inv { --mark-page: #fff; }
+
+.logo.mono-ink .dot { color: inherit; }
+.logo.on-ziegel { color: var(--color-ink); }
+.logo.on-ziegel { --mark-fold: #fff; }
+.logo.on-ziegel .dot { color: #fff; }
+
+/* Farbfelder */
+.sw { border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-hairline); display: flex; flex-direction: column; }
+.sw .chip { flex: 1; min-height: 34mm; padding: 4mm; display: flex; align-items: flex-end; font-family: var(--font-display); font-size: 15pt; font-weight: 500; letter-spacing: -0.02em; }
+.sw .meta { padding: 3mm 4mm; font-family: var(--font-mono); font-size: 7.5pt; line-height: 1.6; color: var(--text-secondary); background: #fff; }
+.scale { display: flex; border-radius: var(--radius-l); overflow: hidden; border: 1px solid var(--border-hairline); }
+.scale div { flex: 1; height: 17mm; padding: 1.6mm; display: flex; flex-direction: column; justify-content: flex-end; font-family: var(--font-mono); font-size: 6.2pt; line-height: 1.3; }
+
+/* Do/Don't */
+.dd { border-radius: var(--radius-xl); border: 1px solid var(--border-hairline); overflow: hidden; }
+.dd .stage { height: 30mm; display: flex; align-items: center; justify-content: center; background: var(--surface-subtle); position: relative; }
+.dd .cap { padding: 2.5mm 3mm; font-size: 8pt; color: var(--text-secondary); display: flex; gap: 2mm; align-items: flex-start; }
+.dd.bad .stage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - .5px), rgb(220 38 38 / .55) 50%, transparent calc(50% + .5px)); }
+
+/* Social-Mockups */
+.post { position: relative; overflow: hidden; border-radius: 3mm; box-shadow: var(--shadow-m); flex: none; font-family: var(--font-display); }
+.post .in { position: absolute; inset: 0; padding: 7%; display: flex; flex-direction: column; }
+.post .hl { font-weight: 500; letter-spacing: -0.03em; line-height: 1.04; }
+.post .pl { font-family: var(--font-text); }
+.photo { background: linear-gradient(160deg, #cfc6b8 0%, #b9ad9b 45%, #8f8574 100%); position: relative; overflow: hidden; }
+.photo > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cornerfold { position: absolute; top: 0; right: 0; width: 16%; aspect-ratio: 1; background: var(--color-ziegel); clip-path: polygon(0 0, 100% 100%, 0 100%); }
+.cornerfold::before { content: ""; position: absolute; inset: 0; background: rgb(0 0 0 / .0); }
+.marker { background: linear-gradient(transparent 58%, var(--ziegel-200) 58%, var(--ziegel-200) 92%, transparent 92%); padding: 0 .08em; }
+
+/* Mini-Exposé */
+.a4 { background: #fff; box-shadow: var(--shadow-page); border-radius: 1mm; aspect-ratio: 1 / 1.414; position: relative; overflow: hidden; }
+
+/* Abstands-Balken */
+.spacebar { display: flex; align-items: center; gap: 3mm; margin: 1.1mm 0; font-family: var(--font-mono); font-size: 7.5pt; color: var(--text-secondary); }
+.spacebar .b { height: 3.2mm; background: var(--ziegel-300); border-radius: 1px; }
+.spacebar .n { width: 20mm; color: var(--text-primary); }
+.spacebar .v { width: 12mm; }
+
+/* Inhaltsverzeichnis */
+.toc { columns: 2; column-gap: 14mm; }
+.toc div { display: flex; gap: 4mm; padding: 2.2mm 0; border-bottom: 1px solid var(--border-hairline); break-inside: avoid; font-family: var(--font-display); font-size: 11.5pt; letter-spacing: -0.01em; }
+.toc .n { font-family: var(--font-mono); font-size: 8pt; color: var(--color-ziegel); width: 8mm; padding-top: 1mm; }
+.toc .p { margin-left: auto; font-family: var(--font-mono); font-size: 8pt; color: var(--neutral-500); padding-top: 1mm; }
+
+/* Kapiteltrenner */
+.chapter { justify-content: flex-end; }
+.chapter .bignum { font-family: var(--font-display); font-weight: 300; font-size: 120pt; line-height: .85; letter-spacing: -0.04em; color: var(--color-ziegel); }
+.chapter h1 { margin-top: 6mm; }
+
+.slider { position: relative; height: 1.4mm; background: var(--neutral-200); border-radius: 1mm; margin: 3mm 0 1.5mm; }
+.slider i { position: absolute; top: 50%; width: 4mm; height: 4mm; border-radius: 50%; background: var(--color-ziegel); transform: translate(-50%, -50%); border: 2px solid #fff; box-shadow: 0 0 0 1px var(--color-ziegel); }
+.slider-l { display: flex; justify-content: space-between; font-size: 8pt; color: var(--text-secondary); }
+
+.step { width: 7mm; height: 7mm; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-text); font-weight: 500; font-size: 8.5pt; }
+.btn { display: inline-flex; align-items: center; gap: 2mm; height: 9.5mm; padding: 0 4.5mm; border-radius: var(--radius-l); font-family: var(--font-text); font-weight: 500; font-size: 9pt; }
+.btn.pri { background: var(--color-ink); color: #fff; }
+.btn.sec { background: #fff; color: var(--color-ink); box-shadow: var(--shadow-s); }
+.btn.acc { background: var(--color-ziegel); color: var(--color-ink); }
+</style>
+</head>
+<body>
+
+<!-- SVG-Symbol der Bildmarke -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="mark" viewBox="0 0 24 32">
+      <path d="M3 0H15L24 9V29A3 3 0 0 1 21 32H3A3 3 0 0 1 0 29V3A3 3 0 0 1 3 0Z" style="fill:var(--mark-page,#141518)"/>
+      <path d="M15 0V6A3 3 0 0 0 18 9H24Z" style="fill:var(--mark-fold,#E9562C)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ 1 COVER ============ -->
+<section class="page dark" style="justify-content:space-between;padding:20mm 22mm">
+  <div class="logo inv" style="font-size:22pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div>
+  <div>
+    <div class="eyebrow" style="color:var(--color-ziegel)">Brand Guidelines · Version 1.0</div>
+    <h1 style="font-size:64pt;max-width:220mm">Die Marke expose.ai</h1>
+    <p class="lead mt6" style="max-width:160mm">Grundlagen, Regeln und Vorlagen für alle, die mit unserer Marke arbeiten: für Produkt, Website, Social Media und Werbung.</p>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--font-mono);font-size:8pt;color:var(--neutral-400);letter-spacing:.05em;text-transform:uppercase">
+    <span>Stand: Oktober 2026</span><span>Intern · Arbeitstitel „expose.ai“</span>
+  </div>
+  <div style="position:absolute;top:0;right:0;width:70mm;height:70mm;background:var(--color-ziegel);clip-path:polygon(0 0,100% 100%,100% 0)"></div>
+</section>
+
+<!-- ============ 2 INHALT ============ -->
+<section class="page" data-sec="Inhalt">
+  <div class="eyebrow">Inhalt</div>
+  <h2>Was in dieser Guideline steht</h2>
+  <div class="toc mt4 grow">
+    <div><span class="n">00</span>Einleitung<span class="p">03</span></div>
+    <div><span class="n">01</span>Markenkern<span class="p">04</span></div>
+    <div><span class="n">02</span>Zielgruppe &amp; Personas<span class="p">07</span></div>
+    <div><span class="n">03</span>Persönlichkeit &amp; Werte<span class="p">08</span></div>
+    <div><span class="n">04</span>Tonalität &amp; Sprache<span class="p">09</span></div>
+    <div><span class="n">05</span>Logo<span class="p">13</span></div>
+    <div><span class="n">06</span>Farben<span class="p">18</span></div>
+    <div><span class="n">07</span>Typografie<span class="p">24</span></div>
+    <div><span class="n">08</span>Raster, Abstände &amp; Flächen<span class="p">29</span></div>
+    <div><span class="n">09</span>Icons &amp; Bildsprache<span class="p">33</span></div>
+    <div><span class="n">10</span>Grafische Elemente<span class="p">35</span></div>
+    <div><span class="n">11</span>Social Media<span class="p">36</span></div>
+    <div><span class="n">12</span>Werbeanzeigen<span class="p">42</span></div>
+    <div><span class="n">13</span>Bewegung<span class="p">47</span></div>
+    <div><span class="n">14</span>Produkt-UI Kurzreferenz<span class="p">48</span></div>
+    <div><span class="n">15</span>Design Tokens<span class="p">49</span></div>
+    <div><span class="n">16</span>Checklisten<span class="p">51</span></div>
+  </div>
+</section>
+
+<!-- ============ 3 EINLEITUNG ============ -->
+<section class="page" data-sec="00 Einleitung">
+  <div class="eyebrow"><b>00</b> Einleitung</div>
+  <h2>Eine Marke, die man wiedererkennt. Überall.</h2>
+  <div class="row mt4">
+    <div class="col">
+      <p class="lead">Diese Guideline beschreibt, wie expose.ai aussieht, klingt und sich anfühlt. Sie ist das gemeinsame Fundament für alle, die für die Marke gestalten oder schreiben: Produktteam, Agenturen, Freelancer und Social-Media-Verantwortliche.</p>
+      <p class="mt4">Eine starke Marke entsteht nicht durch ein schönes Logo, sondern durch <strong>Wiederholung und Konsistenz</strong>. Jeder Post, jede Anzeige und jeder Screen zahlt auf dasselbe Bild ein: ein ruhiges, präzises Werkzeug, das Maklern Arbeit abnimmt und ihre Objekte glänzen lässt.</p>
+    </div>
+    <div class="col">
+      <div class="card subtle">
+        <h3>So nutzen Sie diese Guideline</h3>
+        <ul class="list mt2">
+          <li><strong>Kapitel 01–04</strong> erklären, wofür wir stehen und wie wir sprechen. Pflichtlektüre für alle Texte.</li>
+          <li><strong>Kapitel 05–10</strong> definieren das visuelle System: Logo, Farben, Schrift, Raster, Bilder.</li>
+          <li><strong>Kapitel 11–12</strong> übersetzen das System in Social Media und Werbung, inklusive Formaten und Vorlagen.</li>
+          <li><strong>Kapitel 15</strong> enthält alle Design Tokens. Die maschinenlesbare Quelle ist <span class="mono">brand/tokens.css</span>.</li>
+        </ul>
+      </div>
+      <div class="card mt4">
+        <h4>Hinweis zu Platzhaltern</h4>
+        <p class="small">Inhalte, die noch nicht feststehen, sind als <span class="ph">[PLATZHALTER]</span> markiert. Personas beruhen auf Annahmen und sind durch Interviews zu validieren. Das Logo ist ein Arbeitsentwurf, bis der finale Produktname feststeht.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 MARKENKERN Kapitel ============ -->
+<section class="page dark chapter" data-sec="01 Markenkern">
+  <div class="bignum">01</div>
+  <h1>Markenkern</h1>
+  <p class="lead mt4">Warum es uns gibt, wohin wir wollen und was wir versprechen.</p>
+</section>
+
+<section class="page" data-sec="01 Markenkern">
+  <div class="eyebrow"><b>01</b> Markenkern</div>
+  <h2>Mission, Vision, Versprechen</h2>
+  <div class="g3 mt4">
+    <div class="card"><div class="eyebrow">Mission</div><h3>Warum wir existieren</h3><p>Wir geben Immobilienmaklern ihre Zeit zurück. expose.ai verwandelt nüchterne Objektdaten in Minuten in professionelle Exposés, damit Makler sich auf das konzentrieren, was nur sie können: Menschen und Immobilien zusammenbringen.</p></div>
+    <div class="card"><div class="eyebrow">Vision</div><h3>Wohin wir wollen</h3><p>Jedes Objekt in Deutschland verdient einen ersten Eindruck, der ihm gerecht wird, unabhängig davon, ob ein großes Büro oder ein Einzelmakler es vermarktet.</p></div>
+    <div class="card" style="background:var(--color-ink);border-color:var(--color-ink)"><div class="eyebrow" style="color:var(--color-ziegel)">Markenversprechen</div><h3 style="color:#fff">In einem Satz</h3><p style="color:rgb(255 255 255 / .8);font-family:var(--font-display);font-size:15pt;line-height:1.3;letter-spacing:-0.02em">„Aus Ihren Eckdaten wird in Minuten ein Exposé, das verkauft.“</p></div>
+  </div>
+  <div class="row mt8">
+    <div class="col">
+      <h3>Positionierung</h3>
+      <p class="mt2">Für <strong>Immobilienmakler in Deutschland</strong>, die professionell auftreten wollen, ohne Stunden in Layout-Programmen oder Geld in Agenturen zu investieren, ist expose.ai <strong>der Exposé-Builder</strong>, der aus einer einfachen PDF ein vollständig gestaltetes, rechtssicheres Exposé mit Lageanalyse erstellt. Anders als Vorlagen in Maklersoftware oder Design-Tools <strong>denkt expose.ai mit</strong>: Es liest Daten aus, analysiert die Lage, schreibt Texte und schlägt den passenden Stil vor.</p>
+    </div>
+    <div class="col">
+      <h3>Die drei Säulen</h3>
+      <table class="mt2">
+        <tr><th>Säule</th><th>Bedeutet für den Makler</th></tr>
+        <tr><td>Schnell</td><td>Minuten statt Stunden. Kein Abtippen, kein Layouten.</td></tr>
+        <tr><td>Schön</td><td>Exposés auf Agenturniveau in seinem eigenen Branding.</td></tr>
+        <tr><td>Sicher</td><td>Pflichtangaben (GEG, Provision) sind eingebaut. Zahlen erst, wenn es gefällt.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="page sand" data-sec="01 Markenkern">
+  <div class="eyebrow"><b>01</b> Markenkern</div>
+  <h2>Was wir sind – und was nicht</h2>
+  <div class="g2 mt4">
+    <div>
+      <h3>Wir sind …</h3>
+      <table class="mt2">
+        <tr><td>ein Werkzeug</td><td>Wir machen Makler besser, wir ersetzen sie nicht.</td></tr>
+        <tr><td>ruhig &amp; präzise</td><td>Klare Oberflächen, klare Sprache, keine Effekthascherei.</td></tr>
+        <tr><td>branchenkundig</td><td>Wir kennen GEG, Provisionsrecht und den Alltag im Maklerbüro.</td></tr>
+        <tr><td>ehrlich</td><td>Echte Zahlen, echte Kunden, transparente Preise.</td></tr>
+        <tr><td>die Bühne</td><td>Im Mittelpunkt steht das Objekt und die Marke des Maklers, nicht unsere.</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Wir sind nicht …</h3>
+      <table class="mt2">
+        <tr><td>ein KI-Gimmick</td><td>KI ist Mittel zum Zweck. Wir verkaufen Ergebnisse, nicht Technologie.</td></tr>
+        <tr><td>laut</td><td>Keine Ausrufezeichen-Kaskaden, keine Neonfarben, kein Hype.</td></tr>
+        <tr><td>eine Designagentur</td><td>Wir liefern in Minuten, nicht in Tagen.</td></tr>
+        <tr><td>verspielt</td><td>Freundlich ja, albern nein. Keine Emojis als Gestaltungselement.</td></tr>
+        <tr><td>Billigware</td><td>Günstig im Preis, hochwertig im Ergebnis.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 ZIELGRUPPE ============ -->
+<section class="page" data-sec="02 Zielgruppe">
+  <div class="eyebrow"><b>02</b> Zielgruppe &amp; Personas</div>
+  <h2>Für wen wir gestalten</h2>
+  <p class="small muted" style="margin-top:-3mm">Annahmen auf Basis der Produktplanung. Vor Kampagnenstart durch 5–10 Interviews mit Maklern validieren.</p>
+  <div class="g2 mt6">
+    <div class="card">
+      <div class="row" style="gap:4mm;align-items:center"><div style="width:14mm;height:14mm;border-radius:50%;background:var(--sand-200);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600">TM</div><div><h3 style="margin:0">Thomas, 46</h3><div class="small muted">Einzelmakler · Kleinstadt · <span class="ph">[Persona validieren]</span></div></div></div>
+      <table class="mt4">
+        <tr><td>Situation</td><td>Vermarktet 15–25 Objekte pro Jahr allein. Exposés baut er abends in Word.</td></tr>
+        <tr><td>Schmerz</td><td>Zeitmangel, Exposés sehen „selbst gemacht“ aus, Angst vor fehlenden Pflichtangaben.</td></tr>
+        <tr><td>Ziel</td><td>Professionell wirken wie die großen Büros. Mehr Zeit für Besichtigungen.</td></tr>
+        <tr><td>Kanäle</td><td>Facebook, Instagram, Fachgruppen, Google-Suche.</td></tr>
+        <tr><td>Kauft</td><td>Pay-per-Exposé, später ggf. kleines Abo.</td></tr>
+        <tr><td>Überzeugt durch</td><td>Vorher/Nachher, „zahlen erst beim Download“, einfache Bedienung.</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="row" style="gap:4mm;align-items:center"><div style="width:14mm;height:14mm;border-radius:50%;background:var(--ziegel-100);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600">SK</div><div><h3 style="margin:0">Sandra, 38</h3><div class="small muted">Inhaberin Maklerbüro · Großstadt · 6 Mitarbeitende · <span class="ph">[Persona validieren]</span></div></div></div>
+      <table class="mt4">
+        <tr><td>Situation</td><td>Büro mit 60–100 Objekten pro Jahr. Exposés teils über Grafiker, teils intern.</td></tr>
+        <tr><td>Schmerz</td><td>Uneinheitlicher Auftritt im Team, Agenturkosten, Wartezeiten.</td></tr>
+        <tr><td>Ziel</td><td>Einheitliche Marke, schnellere Vermarktung, planbare Kosten.</td></tr>
+        <tr><td>Kanäle</td><td>LinkedIn, Instagram, Branchen-Newsletter, Messen.</td></tr>
+        <tr><td>Kauft</td><td>Abo für das Team.</td></tr>
+        <tr><td>Überzeugt durch</td><td>Hausstil-Funktion, Qualität der Beispiele, Kosten im Vergleich zur Agentur.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 PERSÖNLICHKEIT ============ -->
+<section class="page" data-sec="03 Persönlichkeit">
+  <div class="eyebrow"><b>03</b> Persönlichkeit &amp; Werte</div>
+  <h2>Wäre expose.ai ein Mensch …</h2>
+  <p class="lead">… dann eine erfahrene Kollegin aus dem Marketing, die ruhig bleibt, wenn es stressig wird, genau weiß, was ein gutes Exposé ausmacht, und Ihnen die lästige Arbeit einfach abnimmt.</p>
+  <div class="row mt8">
+    <div class="col">
+      <h3>Persönlichkeits-Regler</h3>
+      <div class="mt4">
+        <div class="slider"><i style="left:30%"></i></div><div class="slider-l"><span>Seriös</span><span>Verspielt</span></div>
+        <div class="slider mt4"><i style="left:25%"></i></div><div class="slider-l"><span>Ruhig</span><span>Laut</span></div>
+        <div class="slider mt4"><i style="left:65%"></i></div><div class="slider-l"><span>Distanziert</span><span>Nahbar</span></div>
+        <div class="slider mt4"><i style="left:35%"></i></div><div class="slider-l"><span>Klassisch</span><span>Modern</span></div>
+        <div class="slider mt4"><i style="left:20%"></i></div><div class="slider-l"><span>Präzise</span><span>Vage</span></div>
+      </div>
+    </div>
+    <div class="col" style="flex:1.3">
+      <h3>Unsere Werte</h3>
+      <div class="g2 mt4" style="gap:5mm">
+        <div class="card subtle"><h4>Klarheit</h4><p class="small">Wir sagen in einem Satz, was andere in drei sagen. In Texten, Oberflächen und Preisen.</p></div>
+        <div class="card subtle"><h4>Handwerk</h4><p class="small">Gute Typografie, saubere Abstände, korrekte Pflichtangaben. Qualität steckt im Detail.</p></div>
+        <div class="card subtle"><h4>Ehrlichkeit</h4><p class="small">Keine erfundenen Zahlen, keine künstliche Verknappung. Vertrauen ist unser wichtigstes Kapital.</p></div>
+        <div class="card subtle"><h4>Respekt vor Zeit</h4><p class="small">Jeder Klick, den wir einsparen, ist eine Minute mehr für Kunden.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 TONALITÄT ============ -->
+<section class="page dark chapter" data-sec="04 Tonalität">
+  <div class="bignum">04</div>
+  <h1>Tonalität &amp; Sprache</h1>
+  <p class="lead mt4">Wie wir schreiben – auf der Website, im Produkt, in Posts und Anzeigen.</p>
+</section>
+
+<section class="page" data-sec="04 Tonalität">
+  <div class="eyebrow"><b>04</b> Tonalität</div>
+  <h2>Vier Prinzipien für jeden Text</h2>
+  <div class="g4 mt4">
+    <div class="card"><div class="num accent">1</div><h3 class="mt4">Nutzen zuerst</h3><p class="small">Wir beschreiben, was der Makler gewinnt, nicht, was die Technik tut.</p></div>
+    <div class="card"><div class="num accent">2</div><h3 class="mt4">Konkret statt vage</h3><p class="small">Zahlen, Beispiele, Ergebnisse. „10 Minuten“ statt „blitzschnell“.</p></div>
+    <div class="card"><div class="num accent">3</div><h3 class="mt4">Kurz &amp; aktiv</h3><p class="small">Kurze Sätze, aktive Verben. Ein Gedanke pro Satz.</p></div>
+    <div class="card"><div class="num accent">4</div><h3 class="mt4">Auf Augenhöhe</h3><p class="small">Wir sprechen wie ein Kollege aus der Branche: kompetent, nie belehrend.</p></div>
+  </div>
+  <div class="g2 mt8">
+    <div>
+      <span class="tag do">So schreiben wir</span>
+      <table class="mt2">
+        <tr><td>„Laden Sie Ihre PDF hoch. Den Rest erledigen wir.“</td></tr>
+        <tr><td>„Ihr Exposé ist fertig. Prüfen Sie es in Ruhe.“</td></tr>
+        <tr><td>„Energieausweis fehlt noch. Ohne ihn darf das Exposé nicht veröffentlicht werden.“</td></tr>
+        <tr><td>„Sie zahlen erst, wenn Ihnen das Ergebnis gefällt.“</td></tr>
+      </table>
+    </div>
+    <div>
+      <span class="tag dont">So nicht</span>
+      <table class="mt2">
+        <tr><td>„Unsere revolutionäre KI-Engine generiert disruptive Exposés!!!“</td></tr>
+        <tr><td>„Prozess erfolgreich abgeschlossen. Dokument wurde generiert.“</td></tr>
+        <tr><td>„Fehler: Pflichtfeld energy_cert ungültig.“</td></tr>
+        <tr><td>„Jetzt zuschlagen – nur heute!“</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="04 Tonalität">
+  <div class="eyebrow"><b>04</b> Tonalität</div>
+  <h2>Eine Stimme, viele Situationen</h2>
+  <p class="lead">Die Stimme bleibt gleich, der Ton passt sich an die Situation an.</p>
+  <table class="mt6">
+    <tr><th style="width:22%">Situation</th><th style="width:22%">Ton</th><th>Beispiel</th></tr>
+    <tr><td>Landingpage / Hero</td><td>Selbstbewusst, verheißungsvoll</td><td>„Aus Ihren Eckdaten wird in 10 Minuten ein Exposé, das verkauft.“</td></tr>
+    <tr><td>Onboarding / Wizard</td><td>Ermutigend, anleitend</td><td>„Gut gemacht. Jetzt noch ein paar Bilder, dann sieht es richtig gut aus.“</td></tr>
+    <tr><td>Fehlermeldung</td><td>Ruhig, lösungsorientiert</td><td>„Diese Datei konnten wir nicht lesen. Versuchen Sie eine PDF unter 20 MB oder tragen Sie die Daten direkt ein.“</td></tr>
+    <tr><td>Zahlung</td><td>Klar, vertrauensbildend</td><td>„30 € inkl. MwSt. Sie erhalten sofort das PDF und eine Rechnung.“</td></tr>
+    <tr><td>Instagram</td><td>Inspirierend, visuell, locker-professionell</td><td>„Gleiche Wohnung. Anderer erster Eindruck. Wischen Sie für das Vorher.“</td></tr>
+    <tr><td>LinkedIn</td><td>Fachlich, meinungsstark, hilfreich</td><td>„Drei Angaben, die in 7 von 10 Exposés fehlen – und warum das teuer werden kann.“</td></tr>
+    <tr><td>Werbeanzeige</td><td>Direkt, nutzenorientiert</td><td>„Exposé in 10 Minuten. Zahlen erst beim Download.“</td></tr>
+    <tr><td>Support</td><td>Empathisch, persönlich</td><td>„Das klingt ärgerlich. Ich schaue mir Ihr Exposé direkt an.“</td></tr>
+  </table>
+  <p class="small muted mt4">Zahlenaussagen in Beispielen (z. B. „7 von 10“, „10 Minuten“) sind Muster. Sie dürfen nur mit belegten Daten veröffentlicht werden.</p>
+</section>
+
+<section class="page" data-sec="04 Sprache">
+  <div class="eyebrow"><b>04</b> Sprache</div>
+  <h2>Schreibregeln &amp; Wortliste</h2>
+  <div class="row mt2">
+    <div class="col">
+      <h3>Schreibregeln</h3>
+      <table class="mt2">
+        <tr><td>Anrede</td><td>Immer <strong>„Sie“</strong>, auf allen Kanälen. „Ihr“, „Ihnen“ groß.</td></tr>
+        <tr><td>Markenname</td><td>Immer klein: <strong>expose.ai</strong>. Auch am Satzanfang. Nie „Expose.AI“ oder „Exposé.ai“.</td></tr>
+        <tr><td>„Exposé“</td><td>Mit Akzent: Exposé, Exposés.</td></tr>
+        <tr><td>Zahlen</td><td>Eins bis zwölf ausschreiben, ab 13 Ziffern. Bei Maßen, Preisen und Zeiten immer Ziffern: 3 Zimmer, 10 Minuten.</td></tr>
+        <tr><td>Preise</td><td>30 € (Leerzeichen vor €). Endkunden-Preise immer mit Hinweis „inkl. MwSt.“ bzw. „zzgl. MwSt.“ <span class="ph">[festlegen]</span></td></tr>
+        <tr><td>Datum / Uhrzeit</td><td>7. Oktober 2026 · 07.10.2026 · 14:30 Uhr</td></tr>
+        <tr><td>Flächen</td><td>85 m² (mit hochgestellter 2, Leerzeichen)</td></tr>
+        <tr><td>Gendern</td><td>Neutrale Formen bevorzugen („Maklerbüros“, „Team“, „Kundschaft“). Wo nicht möglich: <span class="ph">[Regel festlegen]</span></td></tr>
+        <tr><td>Satzzeichen</td><td>Maximal ein Ausrufezeichen pro Text. Gedankenstrich mit Leerzeichen ( – ).</td></tr>
+        <tr><td>Emojis</td><td>Im Produkt nie. Auf Social sparsam (max. 1–2 pro Post, nie in Headlines).</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:.8">
+      <h3>Wir sagen / Wir sagen nicht</h3>
+      <table class="mt2">
+        <tr><th>Ja</th><th>Nein</th></tr>
+        <tr><td>Exposé erstellen</td><td>Exposé generieren</td></tr>
+        <tr><td>Ihr Exposé</td><td>Das Dokument / der Output</td></tr>
+        <tr><td>Wir lesen Ihre Daten aus</td><td>Unser Parser extrahiert</td></tr>
+        <tr><td>Lageanalyse</td><td>POI-Scan / Umfeld-API</td></tr>
+        <tr><td>Stil</td><td>Template / Theme</td></tr>
+        <tr><td>Hausstil</td><td>Preset / Corporate Theme</td></tr>
+        <tr><td>Herunterladen</td><td>Downloaden / Exportieren</td></tr>
+        <tr><td>Kostenlos starten</td><td>Gratis testen!!!</td></tr>
+        <tr><td>Makler, Maklerbüro</td><td>User, Kunde (intern ok)</td></tr>
+        <tr><td>Texte schreiben lassen</td><td>KI-Content generieren</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 LOGO ============ -->
+<section class="page dark chapter" data-sec="05 Logo">
+  <div class="bignum">05</div>
+  <h1>Logo</h1>
+  <p class="lead mt4">Arbeitsentwurf. Wird finalisiert, sobald der Produktname feststeht.</p>
+</section>
+
+<section class="page" data-sec="05 Logo">
+  <div class="eyebrow"><b>05</b> Logo · Aufbau</div>
+  <h2>Ein Blatt mit umgeschlagener Ecke</h2>
+  <div class="row mt2 grow">
+    <div class="col" style="flex:1.4;background:var(--surface-subtle);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center">
+      <div class="logo" style="font-size:54pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div>
+    </div>
+    <div class="col">
+      <h3>Bildmarke</h3>
+      <p>Ein Dokument im Hochformat mit umgeschlagener Ecke in Ziegel. Es steht für das Exposé selbst – und für den Moment, in dem man eine Seite umblättert und neugierig wird. Die Ecke ist unser wichtigstes grafisches Motiv (siehe Kapitel 10).</p>
+      <h3 class="mt6">Wortmarke</h3>
+      <p>„expose.ai“ in Plus Jakarta Sans SemiBold, Laufweite −3,5 %, durchgehend klein geschrieben. Der Punkt ist in Ziegel gesetzt und verbindet Wortmarke und Bildmarke farblich.</p>
+      <h3 class="mt6">Proportionen</h3>
+      <p>Die Bildmarke ist so hoch wie die Oberlänge der Wortmarke plus Unterlänge (ca. 1,08 × Schriftgröße). Abstand zwischen Bild- und Wortmarke: 0,32 × Schriftgröße.</p>
+      <p class="small mt4"><span class="ph">[Finale Logodatei als Vektor (Text in Pfade umgewandelt) erstellen, sobald der Name feststeht]</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="05 Logo">
+  <div class="eyebrow"><b>05</b> Logo · Schutzzone &amp; Mindestgröße</div>
+  <h2>Raum zum Atmen</h2>
+  <div class="row mt2 grow">
+    <div class="col" style="flex:1.3;display:flex;align-items:center;justify-content:center;background:var(--surface-subtle);border-radius:var(--radius-xl)">
+      <div style="position:relative;padding:15mm;outline:1px dashed var(--ziegel-400);">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 3mm,rgb(233 86 44 / .07) 3mm 6mm);"></div>
+        <div class="logo" style="font-size:40pt;position:relative;outline:1px solid var(--ziegel-400)"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div>
+        <div class="mono" style="position:absolute;top:4mm;left:50%;transform:translateX(-50%);font-size:7pt;color:var(--ziegel-600)">X</div>
+        <div class="mono" style="position:absolute;left:5mm;top:50%;transform:translateY(-50%);font-size:7pt;color:var(--ziegel-600)">X</div>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Schutzzone</h3>
+      <p>Um das Logo herum bleibt mindestens der Abstand <strong>X</strong> frei. X entspricht der Breite der Bildmarke. In diesem Bereich stehen keine Texte, Bildkanten oder anderen Logos.</p>
+      <h3 class="mt6">Mindestgrößen</h3>
+      <table class="mt2">
+        <tr><th>Medium</th><th>Logo komplett</th><th>Nur Bildmarke</th></tr>
+        <tr><td>Bildschirm</td><td>96 px breit</td><td>16 px hoch</td></tr>
+        <tr><td>Druck</td><td>25 mm breit</td><td>5 mm hoch</td></tr>
+        <tr><td>Social-Profilbild</td><td>–</td><td>Bildmarke zentriert, 60 % der Fläche</td></tr>
+      </table>
+      <h3 class="mt6">Wann nur die Bildmarke?</h3>
+      <p>Favicon, App-Icon, Profilbilder, Wasserzeichen in der Vorschau und als kleines Absenderzeichen in Social-Grafiken.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="05 Logo">
+  <div class="eyebrow"><b>05</b> Logo · Farbvarianten</div>
+  <h2>Vier Varianten für vier Hintergründe</h2>
+  <div class="g4 mt2 grow" style="grid-template-rows:1fr auto">
+    <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center"><div class="logo" style="font-size:22pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div>
+    <div style="background:var(--color-ink);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center"><div class="logo inv" style="font-size:22pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div>
+    <div style="background:var(--color-sand);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center"><div class="logo" style="font-size:22pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div>
+    <div style="background:var(--color-ziegel);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center"><div class="logo on-ziegel" style="font-size:22pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div>
+    <div><h4>Standard</h4><p class="small">Ink + Ziegel auf Weiß. Erste Wahl für alle hellen Flächen.</p></div>
+    <div><h4>Invertiert</h4><p class="small">Weiß + Ziegel auf Ink. Für dunkle Sektionen, Cover, Ads.</p></div>
+    <div><h4>Auf Sand</h4><p class="small">Wie Standard. Für warme Social- und Print-Flächen.</p></div>
+    <div><h4>Auf Ziegel</h4><p class="small">Ink mit weißer Ecke. Nur für Kampagnenflächen in Ziegel.</p></div>
+  </div>
+  <p class="small muted mt4">Einfarbig (nur Ink oder nur Weiß) ist erlaubt, wenn technisch keine zweite Farbe möglich ist, z. B. bei Stempeln, Gravuren oder Einfarbdruck.</p>
+</section>
+
+<section class="page" data-sec="05 Logo">
+  <div class="eyebrow"><b>05</b> Logo · Fehlanwendungen</div>
+  <h2>Bitte nicht</h2>
+  <div class="g3 mt2">
+    <div class="dd bad"><div class="stage"><div class="logo" style="font-size:16pt;transform:scaleX(1.4)"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div><div class="cap"><span class="tag dont">Nein</span>Nicht verzerren oder stauchen.</div></div>
+    <div class="dd bad"><div class="stage"><div class="logo" style="font-size:16pt;color:#2563EB"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot" style="color:#16A34A">.</span>ai</span></div></div><div class="cap"><span class="tag dont">Nein</span>Keine anderen Farben verwenden.</div></div>
+    <div class="dd bad"><div class="stage"><div class="logo" style="font-size:16pt;transform:rotate(-12deg)"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div><div class="cap"><span class="tag dont">Nein</span>Nicht drehen oder kippen.</div></div>
+    <div class="dd bad"><div class="stage"><div class="logo" style="font-size:16pt;filter:drop-shadow(3px 4px 3px rgb(0 0 0 / .5))"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div><div class="cap"><span class="tag dont">Nein</span>Keine Schatten, Glows oder Effekte.</div></div>
+    <div class="dd bad"><div class="stage photo" style="background:linear-gradient(120deg,#cfc6b8,#6f6658)"><div class="logo" style="font-size:16pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div></div><div class="cap"><span class="tag dont">Nein</span>Nicht auf unruhige Fotos ohne ausreichenden Kontrast.</div></div>
+    <div class="dd bad"><div class="stage"><div class="logo" style="font-size:16pt;font-family:Georgia,serif;font-weight:400;letter-spacing:0"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>Expose.AI</span></div></div><div class="cap"><span class="tag dont">Nein</span>Nicht nachsetzen, andere Schrift oder Großschreibung.</div></div>
+  </div>
+</section>
+
+<!-- ============ 06 FARBEN ============ -->
+<section class="page dark chapter" data-sec="06 Farben">
+  <div class="bignum">06</div>
+  <h1>Farben</h1>
+  <p class="lead mt4">Monochrom als Bühne, Ziegel als Signatur.</p>
+</section>
+
+<section class="page" data-sec="06 Farben">
+  <div class="eyebrow"><b>06</b> Farben · Kernpalette</div>
+  <h2>Vier Farben tragen die Marke</h2>
+  <div class="g4 mt2 grow">
+    <div class="sw"><div class="chip" style="background:var(--color-ink);color:#fff">Ink</div><div class="meta"><strong>#141518</strong><br>RGB 20 21 24<br>CMYK ≈ 75 65 60 85<br>Text, Primär-Buttons, dunkle Flächen</div></div>
+    <div class="sw"><div class="chip" style="background:#fff">Papier</div><div class="meta"><strong>#FFFFFF</strong><br>RGB 255 255 255<br>CMYK 0 0 0 0<br>Hauptfläche, Raum, Ruhe</div></div>
+    <div class="sw"><div class="chip" style="background:var(--color-sand)">Sand</div><div class="meta"><strong>#F4EFE6</strong><br>RGB 244 239 230<br>CMYK ≈ 3 5 9 0<br>Warme Markenfläche für Social &amp; Print</div></div>
+    <div class="sw"><div class="chip" style="background:var(--color-ziegel)">Ziegel</div><div class="meta"><strong>#E9562C</strong><br>RGB 233 86 44<br>CMYK ≈ 0 75 85 0<br>Signatur, Akzent, Aufmerksamkeit</div></div>
+  </div>
+  <div class="row mt6">
+    <div class="col"><p><strong>Warum Ziegel?</strong> Die Farbe kommt aus der Architektur: Backstein, Dachziegel, Terrakotta. Sie ist warm, nahbar und energiegeladen, hebt sich in Social Feeds deutlich vom üblichen Immobilien-Blau ab und harmoniert mit Fotos von Häusern und Innenräumen.</p></div>
+    <div class="col"><p><strong>Warum Sand?</strong> Ein warmes Off-White, das an Papier, Putz und Naturstein erinnert. Es macht Social-Grafiken wohnlich, ohne vom Inhalt abzulenken. CMYK-Werte sind Näherungen und müssen vor dem Druck geprooft werden.</p></div>
+  </div>
+</section>
+
+<section class="page" data-sec="06 Farben">
+  <div class="eyebrow"><b>06</b> Farben · Skalen</div>
+  <h2>Abstufungen für Produkt und Gestaltung</h2>
+  <h4 class="mt2">Neutral (kühles Grau)</h4>
+  <div class="scale mt2">
+    <div style="background:#FFFFFF">0<br>FFFFFF</div><div style="background:#FAFAFB">25<br>FAFAFB</div><div style="background:#F5F5F7">50<br>F5F5F7</div><div style="background:#EDEDF0">100<br>EDEDF0</div><div style="background:#E2E2E7">200<br>E2E2E7</div><div style="background:#CBCBD2">300<br>CBCBD2</div><div style="background:#A3A3AD">400<br>A3A3AD</div><div style="background:#84848F;color:#fff">500<br>84848F</div><div style="background:#64646E;color:#fff">600<br>64646E</div><div style="background:#4A4A53;color:#fff">700<br>4A4A53</div><div style="background:#2E2F34;color:#fff">800<br>2E2F34</div><div style="background:#1E1F23;color:#fff">900<br>1E1F23</div><div style="background:#141518;color:#fff">950<br>141518</div>
+  </div>
+  <h4 class="mt6">Ziegel</h4>
+  <div class="scale mt2">
+    <div style="background:#FFF3EE">50<br>FFF3EE</div><div style="background:#FFE2D6">100<br>FFE2D6</div><div style="background:#FFC3AB">200<br>FFC3AB</div><div style="background:#FF9C78">300<br>FF9C78</div><div style="background:#F7754B">400<br>F7754B</div><div style="background:#E9562C">500<br>E9562C</div><div style="background:#C9431D;color:#fff">600<br>C9431D</div><div style="background:#A23516;color:#fff">700<br>A23516</div><div style="background:#7E2A13;color:#fff">800<br>7E2A13</div><div style="background:#5C1F0F;color:#fff">900<br>5C1F0F</div>
+  </div>
+  <h4 class="mt6">Sand</h4>
+  <div class="scale mt2" style="width:50%">
+    <div style="background:#FBF9F5">50<br>FBF9F5</div><div style="background:#F4EFE6">100<br>F4EFE6</div><div style="background:#E9E0D0">200<br>E9E0D0</div><div style="background:#D9CBB3">300<br>D9CBB3</div><div style="background:#BFAA88">400<br>BFAA88</div>
+  </div>
+  <p class="small mt6">Neutral-Skala für UI-Zustände, Rahmen und Text-Hierarchien. Ziegel 50–200 für zarte Hinterlegungen (z. B. Textmarker), 500 als Signatur, 600–700 wenn Ziegel als Textfarbe gebraucht wird.</p>
+</section>
+
+<section class="page" data-sec="06 Farben">
+  <div class="eyebrow"><b>06</b> Farben · Verhältnis</div>
+  <h2>Die 70 / 20 / 10-Regel</h2>
+  <div style="display:flex;height:24mm;border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border-hairline)" class="mt2">
+    <div style="flex:70;background:#fff;padding:4mm;font-family:var(--font-mono);font-size:8pt">70 % Papier / Sand</div>
+    <div style="flex:20;background:var(--color-ink);color:#fff;padding:4mm;font-family:var(--font-mono);font-size:8pt">20 % Ink</div>
+    <div style="flex:10;background:var(--color-ziegel);padding:4mm;font-family:var(--font-mono);font-size:8pt">10 %</div>
+  </div>
+  <div class="g2 mt6">
+    <div>
+      <h3>Im Produkt und auf der Website</h3>
+      <ul class="list">
+        <li>Die Oberfläche ist <strong>monochrom</strong>: Papier, Neutral, Ink.</li>
+        <li>Primär-Buttons sind immer <strong>Ink</strong>, nie Ziegel.</li>
+        <li>Ziegel nur punktuell: Logo, Fokusring, aktive Markierungen, Highlights in Headlines, kleine Badges.</li>
+        <li>Farbe kommt durch die <strong>Exposé-Vorschau und Fotos</strong> – die Oberfläche ist die Bühne.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>In Social Media und Werbung</h3>
+      <ul class="list">
+        <li>Hier darf Ziegel <strong>mehr Fläche</strong> bekommen (bis 40 %), um im Feed aufzufallen.</li>
+        <li>Sand ist die bevorzugte Hintergrundfläche für Text-Posts.</li>
+        <li>Ink-Flächen für starke Aussagen, Zitate und Zahlen.</li>
+        <li>Nie mehr als <strong>zwei Markenfarben</strong> plus Fotos pro Motiv.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="06 Farben">
+  <div class="eyebrow"><b>06</b> Farben · Kombinationen &amp; Kontrast</div>
+  <h2>Lesbar auf jeder Fläche</h2>
+  <div class="g5 mt2">
+    <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-l);padding:4mm;height:28mm;display:flex;flex-direction:column;justify-content:space-between"><span style="font-family:var(--font-display);font-size:16pt;font-weight:500;color:var(--color-ink)">Aa</span><span class="mono small">Ink / Papier · 18.3:1</span></div>
+    <div style="background:var(--color-sand);border-radius:var(--radius-l);padding:4mm;height:28mm;display:flex;flex-direction:column;justify-content:space-between"><span style="font-family:var(--font-display);font-size:16pt;font-weight:500">Aa</span><span class="mono small">Ink / Sand · 15.9:1</span></div>
+    <div style="background:var(--color-ziegel);border-radius:var(--radius-l);padding:4mm;height:28mm;display:flex;flex-direction:column;justify-content:space-between"><span style="font-family:var(--font-display);font-size:16pt;font-weight:500">Aa</span><span class="mono small">Ink / Ziegel · 5.1:1</span></div>
+    <div style="background:var(--color-ink);border-radius:var(--radius-l);padding:4mm;height:28mm;display:flex;flex-direction:column;justify-content:space-between;color:var(--color-ziegel)"><span style="font-family:var(--font-display);font-size:16pt;font-weight:500">Aa</span><span class="mono small">Ziegel / Ink · 5.1:1</span></div>
+    <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-l);padding:4mm;height:28mm;display:flex;flex-direction:column;justify-content:space-between;color:var(--ziegel-600)"><span style="font-family:var(--font-display);font-size:16pt;font-weight:500">Aa</span><span class="mono small">Ziegel 600 / Papier · 4.9:1</span></div>
+  </div>
+  <table class="mt6">
+    <tr><th>Kombination</th><th>Kontrast</th><th>WCAG</th><th>Verwendung</th></tr>
+    <tr><td>Ink auf Papier / Sand</td><td>18.3 / 15.9 : 1</td><td>AAA</td><td>Standard für jeden Text</td></tr>
+    <tr><td>Neutral 600 auf Papier</td><td>5.9 : 1</td><td>AA</td><td>Fließtext, sekundärer Text</td></tr>
+    <tr><td>Neutral 500 auf Papier</td><td>3.7 : 1</td><td>AA groß</td><td>Nur Meta-Text ≥ 14 px medium oder Labels</td></tr>
+    <tr><td>Ink auf Ziegel</td><td>5.1 : 1</td><td>AA</td><td>Text auf Ziegel-Flächen (Social, Ads, Badges)</td></tr>
+    <tr><td>Ziegel 600 auf Papier</td><td>4.9 : 1</td><td>AA</td><td>Ziegel als Textfarbe (Links, Hervorhebungen)</td></tr>
+    <tr><td>Ziegel 500 auf Ink</td><td>5.1 : 1</td><td>AA</td><td>Akzente auf dunklen Flächen</td></tr>
+    <tr><td style="color:var(--color-error)">Weiß auf Ziegel 500</td><td>3.6 : 1</td><td>nur groß</td><td><strong>Nur</strong> für Headlines ≥ 24 px. Fließtext auf Ziegel immer in Ink.</td></tr>
+  </table>
+</section>
+
+<section class="page" data-sec="06 Farben">
+  <div class="eyebrow"><b>06</b> Farben · Funktion &amp; Kategorien</div>
+  <h2>Farben mit Bedeutung</h2>
+  <div class="row mt2">
+    <div class="col">
+      <h3>Funktionsfarben</h3>
+      <p class="small">Nur für Zustände im Produkt. Nie dekorativ, nie in Kampagnen.</p>
+      <div class="g2 mt4" style="gap:3mm">
+        <div class="card" style="background:var(--color-success-bg);border:0"><span class="mono small" style="color:var(--color-success)">● Erfolg · #1F9D55</span><p class="small mt2">Gekauft, gespeichert, vollständig</p></div>
+        <div class="card" style="background:var(--color-warning-bg);border:0"><span class="mono small" style="color:var(--color-warning)">● Warnung · #D97706</span><p class="small mt2">Pflichtfeld fehlt, letzte Bearbeitung</p></div>
+        <div class="card" style="background:var(--color-error-bg);border:0"><span class="mono small" style="color:var(--color-error)">● Fehler · #DC2626</span><p class="small mt2">Upload fehlgeschlagen, Zahlung abgelehnt</p></div>
+        <div class="card" style="background:var(--color-info-bg);border:0"><span class="mono small" style="color:var(--color-info)">● Info · #2563EB</span><p class="small mt2">Hinweise, automatisch erkannte Felder</p></div>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Kategoriefarben der Lageanalyse</h3>
+      <p class="small">Für Karten-Pins, Icons und Legenden. Jede Kategorie hat genau eine Farbe – in Produkt, Exposé und Social-Grafiken identisch.</p>
+      <table class="mt4">
+        <tr><td><span style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--cat-einkaufen)"></span>&nbsp; Einkaufen</td><td class="mono">#F59E0B</td></tr>
+        <tr><td><span style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--cat-oepnv)"></span>&nbsp; ÖPNV</td><td class="mono">#2563EB</td></tr>
+        <tr><td><span style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--cat-bildung)"></span>&nbsp; Bildung</td><td class="mono">#7C3AED</td></tr>
+        <tr><td><span style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--cat-gesundheit)"></span>&nbsp; Gesundheit</td><td class="mono">#DC2626</td></tr>
+        <tr><td><span style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--cat-sport)"></span>&nbsp; Sport &amp; Fitness</td><td class="mono">#0EA5A4</td></tr>
+        <tr><td><span style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--cat-gastronomie)"></span>&nbsp; Gastronomie</td><td class="mono">#DB2777</td></tr>
+        <tr><td><span style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--cat-natur)"></span>&nbsp; Natur &amp; Parks</td><td class="mono">#16A34A</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 TYPOGRAFIE ============ -->
+<section class="page dark chapter" data-sec="07 Typografie">
+  <div class="bignum">07</div>
+  <h1>Typografie</h1>
+  <p class="lead mt4">Große Worte, leichtes Gewicht.</p>
+</section>
+
+<section class="page" data-sec="07 Typografie">
+  <div class="eyebrow"><b>07</b> Typografie · Schriften</div>
+  <h2>Drei Schriften, klare Rollen</h2>
+  <div class="g3 mt2 grow">
+    <div class="card" style="display:flex;flex-direction:column">
+      <div class="eyebrow">Display</div>
+      <div style="font-family:var(--font-display);font-size:62pt;font-weight:500;letter-spacing:-0.03em;line-height:1">Aa</div>
+      <h3 class="mt4">Plus Jakarta Sans</h3>
+      <p class="small">Headlines, Kennzahlen, Logo, Social- und Ad-Headlines. Geometrisch, rund, freundlich. Gewicht: Medium 500 (Light 300 für große Zahlen, SemiBold 600 nur im Logo).</p>
+      <p class="small mono mt2 muted">Lizenz: OFL · Google Fonts</p>
+      <div class="grow"></div>
+      <div style="font-family:var(--font-display);font-weight:500;font-size:12pt;letter-spacing:-0.01em;margin-top:4mm">ABCDEFGHIJKLM<br>abcdefghijklm<br>0123456789 € m² ÄÖÜß</div>
+    </div>
+    <div class="card" style="display:flex;flex-direction:column">
+      <div class="eyebrow">Text &amp; UI</div>
+      <div style="font-family:var(--font-text);font-size:62pt;font-weight:400;letter-spacing:-0.02em;line-height:1">Aa</div>
+      <h3 class="mt4">Geist</h3>
+      <p class="small">Fließtext, Oberflächen, Buttons, Formulare, Captions. Neutral, sehr gut lesbar in kleinen Größen. Gewicht: Regular 400 und Medium 500.</p>
+      <p class="small mono mt2 muted">Lizenz: OFL · Google Fonts</p>
+      <div class="grow"></div>
+      <div style="font-family:var(--font-text);font-size:12pt;margin-top:4mm">ABCDEFGHIJKLM<br>abcdefghijklm<br>0123456789 € m² ÄÖÜß</div>
+    </div>
+    <div class="card" style="display:flex;flex-direction:column">
+      <div class="eyebrow">Daten</div>
+      <div style="font-family:var(--font-mono);font-size:62pt;font-weight:400;line-height:1">Aa</div>
+      <h3 class="mt4">Geist Mono</h3>
+      <p class="small">Eyebrows, Datumsangaben, technische Werte, Seitenzahlen, Labels in Versalien. Sparsam einsetzen.</p>
+      <p class="small mono mt2 muted">Lizenz: OFL · Google Fonts</p>
+      <div class="grow"></div>
+      <div style="font-family:var(--font-mono);font-size:11pt;margin-top:4mm">ABCDEFGHIJKLM<br>abcdefghijklm<br>0123456789 € m² ÄÖÜß</div>
+    </div>
+  </div>
+  <p class="small muted mt4">Systemschrift-Ersatz, falls eine Schrift nicht verfügbar ist (z. B. in E-Mails oder Office): Arial / Helvetica. Die Schriften für die Exposés der Makler sind davon unabhängig.</p>
+</section>
+
+<section class="page" data-sec="07 Typografie">
+  <div class="eyebrow"><b>07</b> Typografie · Skala Web &amp; Produkt</div>
+  <h2>Hierarchie über Größe, nicht über Gewicht</h2>
+  <table class="mt2">
+    <tr><th style="width:16%">Token</th><th style="width:22%">Größe / Zeile / Laufweite</th><th>Beispiel</th></tr>
+    <tr><td>display-l</td><td class="mono">48 / 48 · −2,5 % · 500</td><td style="font-family:var(--font-display);font-size:30pt;font-weight:500;letter-spacing:-0.025em;line-height:1;color:var(--text-primary)">Exposé erstellen</td></tr>
+    <tr><td>display-m</td><td class="mono">36 / 45 · −2,5 % · 500</td><td style="font-family:var(--font-display);font-size:22pt;font-weight:500;letter-spacing:-0.025em;color:var(--text-primary)">So funktioniert's</td></tr>
+    <tr><td>title-l</td><td class="mono">24 / 32 · −2 % · 500</td><td style="font-family:var(--font-display);font-size:16pt;font-weight:500;letter-spacing:-0.02em;color:var(--text-primary)">Lageanalyse mit Karte</td></tr>
+    <tr><td>title-m</td><td class="mono">20 / 25 · 0 · 500</td><td style="font-family:var(--font-display);font-size:13.5pt;font-weight:500;color:var(--text-primary)">Texte, die verkaufen</td></tr>
+    <tr><td>body-l</td><td class="mono">16 / 24 · 0 · 400</td><td style="font-size:11pt;color:var(--text-secondary)">Laden Sie Ihre PDF hoch. Wir lesen alle Daten automatisch aus.</td></tr>
+    <tr><td>body-m</td><td class="mono">14 / 20 · 0 · 400/500</td><td style="font-size:9.5pt;color:var(--text-secondary)">Standard für Oberflächen, Formulare und Buttons.</td></tr>
+    <tr><td>body-s</td><td class="mono">12 / 16 · 0 · 400/500</td><td style="font-size:8.2pt;color:var(--text-secondary)">Labels, Hilfetexte, Meta-Informationen</td></tr>
+    <tr><td>caption</td><td class="mono">11 / 16 · +0,5 % · 500</td><td style="font-size:7.5pt;color:var(--text-tertiary)">Achsenbeschriftung · Zähler</td></tr>
+    <tr><td>eyebrow</td><td class="mono">12 / 16 · +8 % · Mono · Versal</td><td style="font-family:var(--font-mono);font-size:8pt;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary)">Funktionen →</td></tr>
+    <tr><td>stat</td><td class="mono">60 / 60 · −2 % · 300</td><td style="font-family:var(--font-display);font-size:30pt;font-weight:300;letter-spacing:-0.02em;line-height:1;color:var(--text-primary)">10 Min.</td></tr>
+  </table>
+  <p class="small muted mt4">Mobil: display-l → 36 px, display-m → 28 px, title-l → 20 px. Fließtext bleibt bei 16 px.</p>
+</section>
+
+<section class="page" data-sec="07 Typografie">
+  <div class="eyebrow"><b>07</b> Typografie · Skala Social &amp; Ads</div>
+  <h2>Für Bildschirme in der Hand</h2>
+  <p class="lead">Social-Grafiken werden auf dem Smartphone in ca. 1/3 der Originalgröße gesehen. Deshalb gelten eigene Mindestgrößen – bezogen auf ein Canvas von 1080 px Breite.</p>
+  <div class="row mt6">
+    <div class="col" style="flex:1.3">
+      <table>
+        <tr><th>Rolle</th><th>Größe @1080 px</th><th>Zeile</th><th>Laufweite</th><th>Gewicht</th></tr>
+        <tr><td>Hero-Headline</td><td class="mono">96–120 px</td><td class="mono">1.0</td><td class="mono">−3 %</td><td class="mono">500</td></tr>
+        <tr><td>Headline</td><td class="mono">64–80 px</td><td class="mono">1.05</td><td class="mono">−3 %</td><td class="mono">500</td></tr>
+        <tr><td>Subline</td><td class="mono">36–44 px</td><td class="mono">1.3</td><td class="mono">−1 %</td><td class="mono">400 (Geist)</td></tr>
+        <tr><td>Fließtext (Carousel)</td><td class="mono">32–36 px</td><td class="mono">1.4</td><td class="mono">0</td><td class="mono">400 (Geist)</td></tr>
+        <tr><td>Label / Eyebrow</td><td class="mono">24–28 px</td><td class="mono">1.2</td><td class="mono">+8 %</td><td class="mono">Mono 500</td></tr>
+        <tr><td>Kennzahl</td><td class="mono">160–240 px</td><td class="mono">0.9</td><td class="mono">−4 %</td><td class="mono">300</td></tr>
+        <tr><td>Absolutes Minimum</td><td class="mono">24 px</td><td colspan="3">Alles darunter ist auf dem Handy nicht lesbar.</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <div class="card subtle">
+        <h4>Faustregeln</h4>
+        <ul class="list small">
+          <li>Maximal <strong>8–10 Wörter</strong> in der Headline eines Posts.</li>
+          <li>Maximal <strong>3 Textebenen</strong> pro Motiv (z. B. Eyebrow, Headline, Subline).</li>
+          <li>Headlines linksbündig. Zentriert nur bei Zitaten und Abschluss-Slides.</li>
+          <li>Ein Wort pro Headline darf mit <span class="marker">Ziegel-Marker</span> oder in Ziegel hervorgehoben werden.</li>
+          <li>Text nie über unruhige Bildbereiche legen.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="07 Typografie">
+  <div class="eyebrow"><b>07</b> Typografie · Satzregeln</div>
+  <h2>Gute Typografie in sechs Regeln</h2>
+  <div class="g3 mt2">
+    <div class="card"><span class="tag do">Ja</span><div class="mt4" style="font-family:var(--font-display);font-size:20pt;font-weight:500;letter-spacing:-0.025em;line-height:1.05">Ihr Exposé.<br>In Minuten.</div><p class="small mt4">Headlines Medium, negative Laufweite, bewusster Zeilenumbruch.</p></div>
+    <div class="card"><span class="tag dont">Nein</span><div class="mt4" style="font-family:var(--font-display);font-size:20pt;font-weight:800;letter-spacing:.02em;line-height:1.3;text-transform:uppercase">IHR EXPOSÉ IN MINUTEN!</div><p class="small mt4">Keine fetten Versal-Headlines, keine positive Laufweite in Headlines.</p></div>
+    <div class="card"><span class="tag do">Ja</span><p class="mt4" style="color:var(--text-secondary);font-size:10pt">Fließtext in Neutral 600, Zeilenlänge 45–75 Zeichen, Zeilenabstand 1.5.</p><p class="small mt4">Grau für Text, Ink für Headlines und Interaktion.</p></div>
+    <div class="card"><span class="tag dont">Nein</span><p class="mt4" style="color:var(--neutral-300);font-size:10pt;text-align:justify">Zu heller Fließtext im Blocksatz mit sehr langen Zeilen ist schwer zu lesen und wirkt unruhig.</p><p class="small mt4">Kein Blocksatz, kein Text heller als Neutral 500.</p></div>
+    <div class="card"><span class="tag do">Ja</span><div class="mt4" style="font-family:var(--font-display);font-size:30pt;font-weight:300;letter-spacing:-0.02em;line-height:1">326 m²</div><p class="small mt4">Große Zahlen dünn (300). Einheit gleiche Schrift, kleiner Abstand.</p></div>
+    <div class="card"><span class="tag dont">Nein</span><div class="mt4" style="font-family:var(--font-display);font-size:18pt;font-weight:500;line-height:1.1"><span style="color:var(--color-ziegel)">Ihr</span> <span style="text-decoration:underline">Exposé</span> <i>in</i> <span style="color:#2563EB">Minuten</span></div><p class="small mt4">Nicht mehrere Hervorhebungsarten mischen. Eine pro Headline.</p></div>
+  </div>
+</section>
+
+<!-- ============ 08 RASTER ============ -->
+<section class="page dark chapter" data-sec="08 Raster">
+  <div class="bignum">08</div>
+  <h1>Raster, Abstände &amp; Flächen</h1>
+  <p class="lead mt4">Ordnung, die man nicht sieht, aber spürt.</p>
+</section>
+
+<section class="page" data-sec="08 Abstände">
+  <div class="eyebrow"><b>08</b> Abstände</div>
+  <h2>Ein 4-Pixel-System</h2>
+  <div class="row mt2">
+    <div class="col">
+      <div class="spacebar"><span class="n">space-1</span><span class="v">4 px</span><span class="b" style="width:1.06mm"></span></div>
+      <div class="spacebar"><span class="n">space-2</span><span class="v">8 px</span><span class="b" style="width:2.1mm"></span></div>
+      <div class="spacebar"><span class="n">space-3</span><span class="v">12 px</span><span class="b" style="width:3.2mm"></span></div>
+      <div class="spacebar"><span class="n">space-4</span><span class="v">16 px</span><span class="b" style="width:4.2mm"></span></div>
+      <div class="spacebar"><span class="n">space-5</span><span class="v">20 px</span><span class="b" style="width:5.3mm"></span></div>
+      <div class="spacebar"><span class="n">space-6</span><span class="v">24 px</span><span class="b" style="width:6.4mm"></span></div>
+      <div class="spacebar"><span class="n">space-8</span><span class="v">32 px</span><span class="b" style="width:8.5mm"></span></div>
+      <div class="spacebar"><span class="n">space-10</span><span class="v">40 px</span><span class="b" style="width:10.6mm"></span></div>
+      <div class="spacebar"><span class="n">space-12</span><span class="v">48 px</span><span class="b" style="width:12.7mm"></span></div>
+      <div class="spacebar"><span class="n">space-16</span><span class="v">64 px</span><span class="b" style="width:16.9mm"></span></div>
+      <div class="spacebar"><span class="n">space-20</span><span class="v">80 px</span><span class="b" style="width:21.2mm"></span></div>
+      <div class="spacebar"><span class="n">space-24</span><span class="v">96 px</span><span class="b" style="width:25.4mm"></span></div>
+      <div class="spacebar"><span class="n">space-32</span><span class="v">128 px</span><span class="b" style="width:33.9mm"></span></div>
+      <div class="spacebar"><span class="n">space-40</span><span class="v">160 px</span><span class="b" style="width:42.3mm"></span></div>
+      <div class="spacebar"><span class="n">space-50</span><span class="v">200 px</span><span class="b" style="width:52.9mm"></span></div>
+    </div>
+    <div class="col">
+      <h3>Anwendung</h3>
+      <table class="mt2">
+        <tr><th>Bereich</th><th>Token</th></tr>
+        <tr><td>Icon ↔ Label</td><td class="mono">space-2 (8)</td></tr>
+        <tr><td>Innenabstand Button</td><td class="mono">space-4 horizontal</td></tr>
+        <tr><td>Formularfelder untereinander</td><td class="mono">space-4 (16)</td></tr>
+        <tr><td>Innenabstand Karte</td><td class="mono">space-5 – space-6</td></tr>
+        <tr><td>Gruppen im Formular</td><td class="mono">space-8 (32)</td></tr>
+        <tr><td>Headline ↔ Text</td><td class="mono">space-4 – space-6</td></tr>
+        <tr><td>Rasterabstand (Gap)</td><td class="mono">space-6 (24)</td></tr>
+        <tr><td>Seitenrand Desktop / Mobil</td><td class="mono">space-10 / space-5</td></tr>
+        <tr><td>Sektionen Website</td><td class="mono">space-32 – space-50</td></tr>
+      </table>
+      <p class="small mt4">Werte außerhalb der Skala sind nicht erlaubt. Im Zweifel: <strong>mehr Weißraum</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="08 Flächen">
+  <div class="eyebrow"><b>08</b> Radien, Linien, Schatten</div>
+  <h2>Präzise Formen, leise Tiefe</h2>
+  <div class="g6 mt2">
+    <div style="text-align:center"><div style="height:18mm;background:var(--neutral-100);border:1px solid var(--neutral-300);border-radius:2px"></div><div class="mono small mt2">xs · 2 px</div><div class="small muted">Tags, Balken</div></div>
+    <div style="text-align:center"><div style="height:18mm;background:var(--neutral-100);border:1px solid var(--neutral-300);border-radius:4px"></div><div class="mono small mt2">s · 4 px</div><div class="small muted">Chips, Code</div></div>
+    <div style="text-align:center"><div style="height:18mm;background:var(--neutral-100);border:1px solid var(--neutral-300);border-radius:6px"></div><div class="mono small mt2">m · 6 px</div><div class="small muted">Listeneinträge</div></div>
+    <div style="text-align:center"><div style="height:18mm;background:var(--neutral-100);border:1px solid var(--neutral-300);border-radius:8px"></div><div class="mono small mt2">l · 8 px</div><div class="small muted">Buttons, Inputs</div></div>
+    <div style="text-align:center"><div style="height:18mm;background:var(--neutral-100);border:1px solid var(--neutral-300);border-radius:10px"></div><div class="mono small mt2">xl · 10 px</div><div class="small muted">Karten, Bühnen</div></div>
+    <div style="text-align:center"><div style="height:18mm;background:var(--neutral-100);border:1px solid var(--neutral-300);border-radius:999px"></div><div class="mono small mt2">full</div><div class="small muted">Pills, Avatare</div></div>
+  </div>
+  <div class="g4 mt8">
+    <div style="height:26mm;background:#fff;border-radius:10px;box-shadow:var(--shadow-xs);padding:4mm" class="mono small">shadow-xs<br><span class="muted">Inputs</span></div>
+    <div style="height:26mm;background:#fff;border-radius:10px;box-shadow:var(--shadow-s);padding:4mm" class="mono small">shadow-s<br><span class="muted">Sekundär-Button, Karten</span></div>
+    <div style="height:26mm;background:#fff;border-radius:10px;box-shadow:var(--shadow-m);padding:4mm" class="mono small">shadow-m<br><span class="muted">Hover, Fenster</span></div>
+    <div style="height:26mm;background:#fff;border-radius:10px;box-shadow:var(--shadow-l);padding:4mm" class="mono small">shadow-l<br><span class="muted">Dropdowns, Modals</span></div>
+  </div>
+  <div class="row mt8">
+    <div class="col"><h4>Linien</h4><p class="small">1 px in Neutral 200 trennt Flächen. 1,5 px nur für Icons. Linien ersetzen Schatten, wo immer möglich.</p></div>
+    <div class="col"><h4>Ebenen</h4><p class="small">Seite (Papier) → Bühne (Neutral 100) → Karte/Fenster (Papier + Linie) → Element (Neutral 50). Maximal vier Ebenen.</p></div>
+    <div class="col"><h4>Social / Ads</h4><p class="small">Karten in Social-Grafiken dürfen Radius 2xl (16 px @1080) haben, damit sie in kleiner Darstellung nicht eckig wirken.</p></div>
+  </div>
+</section>
+
+<section class="page" data-sec="08 Raster">
+  <div class="eyebrow"><b>08</b> Layout-Raster</div>
+  <h2>Raster für Web und Social</h2>
+  <div class="row mt2 grow">
+    <div class="col" style="flex:1.6">
+      <h4>Web · 12 Spalten · 1440 px</h4>
+      <div style="position:relative;height:52mm;background:var(--surface-subtle);border-radius:var(--radius-l);padding:0 6mm;display:grid;grid-template-columns:repeat(12,1fr);gap:2mm" class="mt2">
+        <div style="grid-column:span 12;display:contents"></div>
+        <div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div><div style="background:var(--ziegel-100)"></div>
+      </div>
+      <table class="mt4">
+        <tr><td>Container</td><td>max. 1360 px, zentriert</td></tr>
+        <tr><td>Seitenrand</td><td>40 px Desktop · 32 px Tablet · 20 px Mobil</td></tr>
+        <tr><td>Spalten / Gap</td><td>12 / 24 px · Tablet 8 · Mobil 4</td></tr>
+        <tr><td>Typische Aufteilung</td><td>5 + 7 (Text + Produkt), 6 + 6, 4 + 4 + 4</td></tr>
+        <tr><td>Wizard</td><td>Formular 5 Spalten, Vorschau 7 Spalten</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h4>Social · 1080 × 1350 (4:5)</h4>
+      <div style="width:56mm;aspect-ratio:4/5;background:var(--color-sand);position:relative;border-radius:2mm;margin-top:2mm">
+        <div style="position:absolute;inset:7.4%;border:1px dashed var(--ziegel-500)"></div>
+        <div style="position:absolute;left:7.4%;right:7.4%;top:7.4%;height:6%;background:var(--ziegel-100)"></div>
+        <div style="position:absolute;left:7.4%;right:7.4%;bottom:7.4%;height:5%;background:var(--ziegel-100)"></div>
+        <div class="mono" style="position:absolute;left:9%;top:8.4%;font-size:5.5pt;color:var(--ziegel-700)">Eyebrow-Zone</div>
+        <div class="mono" style="position:absolute;left:9%;bottom:8.2%;font-size:5.5pt;color:var(--ziegel-700)">Absender-Zone (Logo)</div>
+      </div>
+      <ul class="list small mt4">
+        <li>Rand: <strong>80 px</strong> rundum (7,4 %).</li>
+        <li>Oben: Eyebrow / Kategorie. Unten: Bildmarke + Handle.</li>
+        <li>Inhalt dazwischen, Headline im oberen Drittel.</li>
+        <li>Raster: 6 Spalten, 24 px Gap.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 ICONS & BILDER ============ -->
+<section class="page" data-sec="09 Icons">
+  <div class="eyebrow"><b>09</b> Iconografie</div>
+  <h2>Feine Linien, klare Formen</h2>
+  <div class="row mt2">
+    <div class="col">
+      <table>
+        <tr><td>Bibliothek</td><td>Lucide (Open Source, ISC) – einheitlicher Stil, große Auswahl</td></tr>
+        <tr><td>Strichstärke</td><td>1,5 px bei 20 px · 1,75 px bei 16 px</td></tr>
+        <tr><td>Größen</td><td>16 · 20 · 24 px (Social: 48–64 px @1080)</td></tr>
+        <tr><td>Farbe</td><td>Ink oder Neutral 600. Ziegel nur für aktive Zustände.</td></tr>
+        <tr><td>Ecken</td><td>Abgerundete Linienenden und Ecken</td></tr>
+        <tr><td>Kategorien</td><td>Lage-Icons in Kategoriefarbe, auf Kreis in 12 % Deckkraft derselben Farbe</td></tr>
+      </table>
+      <div class="card subtle mt4"><h4>Nicht verwenden</h4><p class="small">Gefüllte Icons gemischt mit Linien-Icons, Emojis als Icons, 3D-Icons, Clipart, Icons mit Verläufen.</p></div>
+    </div>
+    <div class="col">
+      <div class="g4" style="gap:3mm">
+        <!-- Icons im Lucide-Stil -->
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#141518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div class="small mt2">Exposé</div></div>
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#141518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg><div class="small mt2">Upload</div></div>
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#141518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="small mt2">Lage</div></div>
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#141518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><div class="small mt2">Bilder</div></div>
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#141518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><div class="small mt2">Texte</div></div>
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#141518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 0 0 0 20c1 0 2-.8 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.3A5.5 5.5 0 0 0 22 10c0-4.4-4.5-8-10-8z"/></svg><div class="small mt2">Design</div></div>
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#141518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg><div class="small mt2">Download</div></div>
+        <div class="card" style="text-align:center;padding:4mm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E9562C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div class="small mt2">Erledigt</div></div>
+      </div>
+      <div class="g4 mt4" style="gap:3mm">
+        <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:8mm;border-radius:50%;background:rgb(37 99 235 / .12);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M4 11h16M8 21l2-4M16 21l-2-4"/></svg></span><span class="small">ÖPNV</span></div>
+        <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:8mm;border-radius:50%;background:rgb(245 158 11 / .14);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span><span class="small">Einkaufen</span></div>
+        <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:8mm;border-radius:50%;background:rgb(14 165 164 / .14);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA5A4" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11M6.5 17.5h11M3 9.5v5M21 9.5v5M6.5 4v16M17.5 4v16"/></svg></span><span class="small">Sport</span></div>
+        <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:8mm;border-radius:50%;background:rgb(22 163 74 / .14);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M7 12l5-9 5 9z"/></svg></span><span class="small">Natur</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="09 Bildsprache">
+  <div class="eyebrow"><b>09</b> Bildsprache</div>
+  <h2>Drei Bildwelten</h2>
+  <div class="g3 mt2">
+    <div>
+      <div class="photo" style="height:48mm;border-radius:var(--radius-xl)"><svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice"><path d="M0 120V70l40-25 40 25v50z" fill="#fff" opacity=".35"/><path d="M80 120V55l55-35 65 40v60z" fill="#fff" opacity=".25"/><rect x="100" y="75" width="18" height="22" fill="#fff" opacity=".4"/><rect x="140" y="75" width="18" height="22" fill="#fff" opacity=".4"/></svg><span class="mono" style="position:absolute;left:3mm;bottom:3mm;font-size:6.5pt;color:#fff">FOTO-PLATZHALTER</span></div>
+      <h3 class="mt4">1 · Immobilien</h3>
+      <ul class="list small"><li>Hell, natürliches Tageslicht, warme Weißbalance</li><li>Gerade Linien (stürzende Linien korrigiert)</li><li>Aufgeräumt, aber bewohnt – keine sterilen 3D-Renderings</li><li>Echte deutsche Objekte: Altbau, Reihenhaus, Neubau, Villa</li><li>Querformat für Web, 4:5-Ausschnitt für Social</li></ul>
+    </div>
+    <div>
+      <div style="height:48mm;border-radius:var(--radius-xl);background:var(--surface-stage);display:flex;align-items:center;justify-content:center;gap:3mm;padding:4mm">
+        <div class="a4" style="height:38mm"><div class="photo" style="height:45%"></div><div style="padding:1.5mm"><div style="height:1.4mm;width:70%;background:var(--color-ink);border-radius:1px"></div><div style="height:.8mm;width:50%;background:var(--neutral-300);margin-top:1mm"></div><div style="height:.8mm;width:60%;background:var(--neutral-300);margin-top:.6mm"></div></div><div class="cornerfold" style="width:14%"></div></div>
+        <div class="a4" style="height:38mm"><div style="padding:1.5mm"><div style="height:1.2mm;width:50%;background:var(--color-ink)"></div></div><div style="margin:0 1.5mm;height:45%;background:#E9EEF2;border-radius:1px;position:relative"><span style="position:absolute;left:40%;top:40%;width:1.5mm;height:1.5mm;border-radius:50%;background:var(--color-ziegel)"></span><span style="position:absolute;left:20%;top:25%;width:1mm;height:1mm;border-radius:50%;background:var(--cat-oepnv)"></span><span style="position:absolute;left:70%;top:60%;width:1mm;height:1mm;border-radius:50%;background:var(--cat-natur)"></span><span style="position:absolute;left:60%;top:20%;width:1mm;height:1mm;border-radius:50%;background:var(--cat-einkaufen)"></span></div></div>
+      </div>
+      <h3 class="mt4">2 · Produkt &amp; Exposés</h3>
+      <ul class="list small"><li>Echte Screens und echte Exposé-Seiten statt Illustrationen</li><li>Auf Bühnen-Fläche (Neutral 100 oder Sand) mit leichtem Seitenschatten</li><li>Leicht überlappend für Tiefe</li><li>Nie mit fiktiven Fantasie-Features</li></ul>
+    </div>
+    <div>
+      <div style="height:48mm;border-radius:var(--radius-xl);background:linear-gradient(160deg,#d8cfc3,#a99c8a);position:relative;overflow:hidden"><svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><circle cx="100" cy="48" r="18" fill="#fff" opacity=".45"/><path d="M60 120c0-28 18-44 40-44s40 16 40 44z" fill="#fff" opacity=".45"/></svg><span class="mono" style="position:absolute;left:3mm;bottom:3mm;font-size:6.5pt;color:#fff">FOTO-PLATZHALTER</span></div>
+      <h3 class="mt4">3 · Menschen</h3>
+      <ul class="list small"><li>Echte Makler bei der Arbeit: Besichtigung, Büro, unterwegs</li><li>Natürlich, nicht gestellt – kein Daumen hoch, kein Headset-Lächeln</li><li>Divers in Alter, Herkunft, Geschlecht</li><li>Nur mit Einverständnis (Model Release)</li></ul>
+    </div>
+  </div>
+  <div class="card subtle mt6"><p class="small"><strong>Grundsätzlich nicht:</strong> generische Stockfotos (Handschlag, Schlüsselübergabe vor weißem Hintergrund), KI-generierte Immobilien, die nicht existieren, übersättigte HDR-Fotos, Filter. Bildrechte immer dokumentieren. <span class="ph">[Bildquelle / Fotograf festlegen]</span></p></div>
+</section>
+
+<!-- ============ 10 GRAFISCHE ELEMENTE ============ -->
+<section class="page sand" data-sec="10 Grafische Elemente">
+  <div class="eyebrow"><b>10</b> Grafische Elemente</div>
+  <h2>Vier Motive, die uns wiedererkennbar machen</h2>
+  <div class="g4 mt2">
+    <div class="card">
+      <div style="height:34mm;background:var(--color-ink);border-radius:var(--radius-l);position:relative;overflow:hidden"><div style="position:absolute;top:0;right:0;width:14mm;height:14mm;background:var(--color-ziegel);clip-path:polygon(0 0,100% 100%,0 100%)"></div><div style="position:absolute;top:0;right:0;width:14mm;height:14mm;background:var(--color-sand);clip-path:polygon(0 0,100% 0,100% 100%)"></div></div>
+      <h3 class="mt4">Die Ecke</h3>
+      <p class="small">Die umgeschlagene Ecke aus dem Logo. Oben rechts auf Flächen, Bildern oder Karten, als Dreieck in Ziegel. Größe: 12–18 % der kürzeren Seite. Maximal einmal pro Motiv.</p>
+    </div>
+    <div class="card">
+      <div style="height:34mm;display:flex;align-items:center;font-family:var(--font-display);font-weight:500;font-size:15pt;letter-spacing:-0.025em;line-height:1.15"><span>Ein Exposé, das <span class="marker">verkauft.</span></span></div>
+      <h3 class="mt4">Der Marker</h3>
+      <p class="small">Ein Textmarker-Streifen in Ziegel 200 unter einem Schlüsselwort. Ein Wort oder eine kurze Wortgruppe pro Headline. Alternative auf dunklen Flächen: Wort in Ziegel 500.</p>
+    </div>
+    <div class="card">
+      <div style="height:34mm;background:#E9EEF2;border-radius:var(--radius-l);position:relative;overflow:hidden">
+        <svg viewBox="0 0 200 120" style="position:absolute;inset:0;width:100%;height:100%"><path d="M0 80 Q60 60 100 70 T200 50" stroke="#fff" stroke-width="6" fill="none"/><path d="M40 0 L70 120" stroke="#fff" stroke-width="4"/></svg>
+        <span style="position:absolute;left:45%;top:42%;width:6mm;height:6mm;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--color-ink);border:2px solid #fff"></span>
+        <span style="position:absolute;left:20%;top:30%;width:3mm;height:3mm;border-radius:50%;background:var(--cat-oepnv);border:1.5px solid #fff"></span>
+        <span style="position:absolute;left:70%;top:62%;width:3mm;height:3mm;border-radius:50%;background:var(--cat-natur);border:1.5px solid #fff"></span>
+        <span style="position:absolute;left:66%;top:22%;width:3mm;height:3mm;border-radius:50%;background:var(--cat-einkaufen);border:1.5px solid #fff"></span>
+        <span style="position:absolute;left:28%;top:68%;width:3mm;height:3mm;border-radius:50%;background:var(--cat-bildung);border:1.5px solid #fff"></span>
+      </div>
+      <h3 class="mt4">Die Karte</h3>
+      <p class="small">Reduzierte Kartenansicht in hellem Blaugrau mit Objekt-Pin in Ink und Kategorie-Punkten. Steht für die Lageanalyse, unser stärkstes Unterscheidungsmerkmal.</p>
+    </div>
+    <div class="card">
+      <div style="height:34mm;display:flex;border-radius:var(--radius-l);overflow:hidden;position:relative">
+        <div style="flex:1;background:#fff;border:1px solid var(--border-hairline);padding:2mm"><div style="height:1mm;background:var(--neutral-300);margin:1mm 0;width:80%"></div><div style="height:1mm;background:var(--neutral-300);margin:1mm 0;width:60%"></div><div style="height:1mm;background:var(--neutral-300);margin:1mm 0;width:70%"></div><div style="height:1mm;background:var(--neutral-300);margin:1mm 0;width:50%"></div></div>
+        <div style="flex:1" class="photo"></div>
+        <div style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--color-ziegel)"></div>
+        <div style="position:absolute;left:50%;top:50%;width:6mm;height:6mm;border-radius:50%;background:var(--color-ziegel);transform:translate(-50%,-50%)"></div>
+      </div>
+      <h3 class="mt4">Der Schnitt</h3>
+      <p class="small">Vorher / Nachher, getrennt durch eine Ziegel-Linie mit Griff. Zeigt die Transformation von Daten zu Exposé. Ideal für Carousels, Reels und Ads.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 SOCIAL MEDIA ============ -->
+<section class="page dark chapter" data-sec="11 Social Media">
+  <div class="bignum">11</div>
+  <h1>Social Media</h1>
+  <p class="lead mt4">Kanäle, Formate, Vorlagen und Content-Strategie.</p>
+</section>
+
+<section class="page" data-sec="11 Social Media">
+  <div class="eyebrow"><b>11</b> Social Media · Kanäle</div>
+  <h2>Jeder Kanal hat eine Aufgabe</h2>
+  <table class="mt2">
+    <tr><th style="width:14%">Kanal</th><th style="width:18%">Rolle</th><th style="width:22%">Zielgruppe</th><th style="width:22%">Ton</th><th>Schwerpunkt-Formate</th></tr>
+    <tr><td>Instagram</td><td>Inspiration &amp; Sichtbarkeit</td><td>Einzelmakler, kleinere Büros</td><td>Visuell, locker-professionell</td><td>Vorher/Nachher-Carousels, Reels (Screen-Recordings), Stories mit Umfragen</td></tr>
+    <tr><td>LinkedIn</td><td>Expertise &amp; Vertrauen</td><td>Büroinhaber, Teamleiter, Branche</td><td>Fachlich, meinungsstark</td><td>PDF-Carousels, Text-Posts mit Grafik, Founder-Posts, Kundenstories</td></tr>
+    <tr><td>Facebook</td><td>Reichweite in Maklergruppen</td><td>Einzelmakler, ländlich</td><td>Hilfsbereit, nahbar</td><td>Gruppenbeiträge, kurze Videos, Ads</td></tr>
+    <tr><td>YouTube</td><td>Tutorials &amp; Suche</td><td>Bestandskunden, Interessierte</td><td>Erklärend, ruhig</td><td>Anleitungen, Shorts <span class="ph">[Priorität klären]</span></td></tr>
+    <tr><td>TikTok</td><td>Optional / Test</td><td>Jüngere Makler</td><td>Schnell, authentisch</td><td>Behind the Scenes, „Exposé in 60 Sekunden“ <span class="ph">[optional]</span></td></tr>
+  </table>
+  <div class="g3 mt6">
+    <div class="card subtle"><h4>Profilbild</h4><p class="small">Bildmarke in Weiß auf Ziegel oder Ink-Bildmarke auf Sand, zentriert, 60 % der Fläche. Auf allen Kanälen identisch.</p></div>
+    <div class="card subtle"><h4>Handle</h4><p class="small"><span class="ph">[@exposeai – Verfügbarkeit prüfen]</span>. Einheitlich auf allen Kanälen.</p></div>
+    <div class="card subtle"><h4>Bio (Vorlage)</h4><p class="small">„Professionelle Immobilien-Exposés in Minuten. PDF hochladen, Stil wählen, fertig. Zahlen erst beim Download. ↓ Jetzt kostenlos starten“</p></div>
+  </div>
+</section>
+
+<section class="page" data-sec="11 Social Media">
+  <div class="eyebrow"><b>11</b> Social Media · Formate</div>
+  <h2>Formate &amp; Sicherheitszonen</h2>
+  <div class="row mt2">
+    <div class="col" style="flex:1.3">
+      <table>
+        <tr><th>Kanal / Format</th><th>Pixel</th><th>Verhältnis</th></tr>
+        <tr><td>Instagram / Facebook Feed</td><td class="mono">1080 × 1350</td><td class="mono">4:5 (Standard)</td></tr>
+        <tr><td>Instagram / Facebook quadratisch</td><td class="mono">1080 × 1080</td><td class="mono">1:1</td></tr>
+        <tr><td>Instagram Carousel</td><td class="mono">1080 × 1350</td><td class="mono">4:5, 3–10 Slides</td></tr>
+        <tr><td>Story / Reel / TikTok / Shorts</td><td class="mono">1080 × 1920</td><td class="mono">9:16</td></tr>
+        <tr><td>LinkedIn Bild-Post</td><td class="mono">1200 × 1500</td><td class="mono">4:5</td></tr>
+        <tr><td>LinkedIn Link-Vorschau</td><td class="mono">1200 × 627</td><td class="mono">1.91:1</td></tr>
+        <tr><td>LinkedIn Dokument-Carousel</td><td class="mono">1080 × 1350 (PDF)</td><td class="mono">4:5</td></tr>
+        <tr><td>LinkedIn Banner (Unternehmen)</td><td class="mono">1128 × 191</td><td class="mono">–</td></tr>
+        <tr><td>Facebook Titelbild</td><td class="mono">1640 × 624</td><td class="mono">–</td></tr>
+        <tr><td>YouTube Thumbnail</td><td class="mono">1280 × 720</td><td class="mono">16:9</td></tr>
+      </table>
+      <p class="small muted mt2">Plattform-Vorgaben ändern sich. Vor jeder Kampagne aktuelle Specs prüfen.</p>
+    </div>
+    <div class="col" style="display:flex;gap:6mm;align-items:flex-start">
+      <div>
+        <div style="width:42mm;aspect-ratio:9/16;background:var(--color-sand);position:relative;border-radius:2mm;overflow:hidden">
+          <div style="position:absolute;left:0;right:0;top:0;height:13%;background:rgb(220 38 38 / .12);border-bottom:1px dashed var(--color-error)"></div>
+          <div style="position:absolute;left:0;right:0;bottom:0;height:20%;background:rgb(220 38 38 / .12);border-top:1px dashed var(--color-error)"></div>
+          <div style="position:absolute;right:0;top:13%;bottom:20%;width:12%;background:rgb(220 38 38 / .06)"></div>
+          <div style="position:absolute;left:6%;right:14%;top:15%;bottom:22%;border:1px dashed var(--ziegel-500)"></div>
+          <div class="mono" style="position:absolute;left:8%;top:4%;font-size:5.5pt;color:var(--color-error)">250 px frei</div>
+          <div class="mono" style="position:absolute;left:8%;bottom:7%;font-size:5.5pt;color:var(--color-error)">340 px frei</div>
+          <div class="mono" style="position:absolute;left:10%;top:48%;font-size:6pt;color:var(--ziegel-700)">Sicherer Bereich</div>
+        </div>
+        <p class="small mt2" style="max-width:42mm">Story / Reel 1080 × 1920</p>
+      </div>
+      <div class="small" style="max-width:52mm">
+        <h4>Sicherheitszonen 9:16</h4>
+        <ul class="list"><li>Oben <strong>250 px</strong> frei (Profil, Fortschrittsbalken)</li><li>Unten <strong>340 px</strong> frei (Antwortfeld, Caption, CTA-Button)</li><li>Bei Reels rechts ca. <strong>120 px</strong> frei (Like-/Kommentar-Icons)</li><li>Logo und CTA nie in den roten Zonen</li></ul>
+        <h4 class="mt4">Feed 4:5</h4>
+        <p>Im Profilraster wird 4:5 auf 3:4 beschnitten. Wichtige Inhalte mittig halten, oben und unten je 60 px Puffer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="11 Social Media">
+  <div class="eyebrow"><b>11</b> Social Media · Vorlagen Feed</div>
+  <h2>Sechs Grundvorlagen</h2>
+  <div style="display:flex;gap:5mm;justify-content:space-between" class="mt2">
+    <!-- 1 Statement -->
+    <div style="width:38mm">
+      <div class="post" style="width:38mm;aspect-ratio:4/5;background:var(--color-sand)"><div class="in"><div class="mono" style="font-size:3.6pt;letter-spacing:.08em;color:var(--neutral-600)">TIPP FÜR MAKLER</div><div class="hl" style="font-size:11pt;margin-top:3mm">Ihr Exposé ist der erste <span class="marker">Besichtigungs&shy;termin.</span></div><div class="grow"></div><div style="display:flex;align-items:center;gap:1mm"><svg viewBox="0 0 24 32" style="height:3mm"><use href="#mark"/></svg><span class="mono" style="font-size:3.4pt">@exposeai</span></div></div></div>
+      <h4 class="mt2">1 · Statement</h4><p class="small">Sand, Headline mit Marker. Für Thesen, Tipps, Haltung.</p>
+    </div>
+    <!-- 2 Vorher Nachher -->
+    <div style="width:38mm">
+      <div class="post" style="width:38mm;aspect-ratio:4/5;background:#fff"><div style="position:absolute;inset:0;display:flex"><div style="flex:1;background:var(--neutral-50);padding:8% 5%"><div style="height:.7mm;background:var(--neutral-300);margin:1mm 0"></div><div style="height:.7mm;background:var(--neutral-300);margin:1mm 0;width:70%"></div><div style="height:.7mm;background:var(--neutral-300);margin:1mm 0;width:85%"></div><div style="height:.7mm;background:var(--neutral-300);margin:1mm 0;width:60%"></div></div><div style="flex:1" class="photo"></div></div><div style="position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:var(--color-ziegel)"></div><div style="position:absolute;left:50%;top:50%;width:3.5mm;height:3.5mm;border-radius:50%;background:var(--color-ziegel);transform:translate(-50%,-50%)"></div><div class="mono" style="position:absolute;left:5%;bottom:5%;font-size:3.6pt">VORHER</div><div class="mono" style="position:absolute;right:5%;bottom:5%;font-size:3.6pt;color:#fff">NACHHER</div></div>
+      <h4 class="mt2">2 · Vorher / Nachher</h4><p class="small">Der Schnitt. Stärkstes Motiv für Reichweite.</p>
+    </div>
+    <!-- 3 Zahl -->
+    <div style="width:38mm">
+      <div class="post" style="width:38mm;aspect-ratio:4/5;background:var(--color-ink);color:#fff"><div class="in"><div class="mono" style="font-size:3.6pt;letter-spacing:.08em;color:var(--neutral-400)">ZEITERSPARNIS</div><div class="grow"></div><div style="font-weight:300;font-size:32pt;letter-spacing:-0.04em;line-height:.9">3 Std.</div><div class="pl" style="font-size:5pt;color:rgb(255 255 255 / .7);margin-top:1.5mm">spart ein Makler pro Exposé <span class="ph" style="font-size:4pt">[Wert belegen]</span></div><div class="grow"></div><div style="display:flex;align-items:center;gap:1mm"><svg viewBox="0 0 24 32" style="height:3mm" class="logo inv"><use href="#mark"/></svg></div></div><div class="cornerfold"></div></div>
+      <h4 class="mt2">3 · Zahl</h4><p class="small">Ink, große dünne Zahl. Nur mit belegten Daten.</p>
+    </div>
+    <!-- 4 Zitat -->
+    <div style="width:38mm">
+      <div class="post" style="width:38mm;aspect-ratio:4/5;background:#fff"><div class="in" style="justify-content:center;text-align:center;align-items:center"><div style="font-size:18pt;color:var(--color-ziegel);line-height:.6">“</div><div class="hl" style="font-size:7.8pt;margin-top:1mm">Seit expose.ai baue ich Exposés in der Mittagspause.</div><div style="width:6mm;height:6mm;border-radius:50%;background:var(--sand-200);margin-top:3mm"></div><div class="pl" style="font-size:4pt;margin-top:1mm">[Name], [Maklerbüro]</div></div></div>
+      <h4 class="mt2">4 · Kundenstimme</h4><p class="small">Weiß, zentriert, Foto. Nur echte, freigegebene Zitate.</p>
+    </div>
+    <!-- 5 Feature -->
+    <div style="width:38mm">
+      <div class="post" style="width:38mm;aspect-ratio:4/5;background:var(--surface-stage)"><div class="in"><div class="mono" style="font-size:3.6pt;letter-spacing:.08em;color:var(--neutral-600)">FUNKTION</div><div class="hl" style="font-size:9pt;margin-top:2mm">Die Lage verkauft. Wir zeigen sie.</div><div class="grow"></div><div style="background:#fff;border-radius:1.5mm;box-shadow:var(--shadow-m);height:44%;padding:1.5mm;position:relative;overflow:hidden"><div style="position:absolute;inset:1.5mm;background:#E9EEF2;border-radius:1mm"></div><span style="position:absolute;left:45%;top:40%;width:2.2mm;height:2.2mm;border-radius:50%;background:var(--color-ink);border:1px solid #fff"></span><span style="position:absolute;left:25%;top:30%;width:1.3mm;height:1.3mm;border-radius:50%;background:var(--cat-oepnv)"></span><span style="position:absolute;left:68%;top:65%;width:1.3mm;height:1.3mm;border-radius:50%;background:var(--cat-natur)"></span><span style="position:absolute;left:62%;top:25%;width:1.3mm;height:1.3mm;border-radius:50%;background:var(--cat-einkaufen)"></span></div></div></div>
+      <h4 class="mt2">5 · Funktion</h4><p class="small">Bühne + echter Produktausschnitt.</p>
+    </div>
+    <!-- 6 Ankündigung -->
+    <div style="width:38mm">
+      <div class="post" style="width:38mm;aspect-ratio:4/5;background:var(--color-ziegel)"><div class="in"><div class="mono" style="font-size:3.6pt;letter-spacing:.08em">NEU</div><div class="hl" style="font-size:12pt;margin-top:3mm">Hausstil speichern.</div><div class="pl" style="font-size:5pt;margin-top:2mm">Einmal festlegen, jedes Exposé sieht nach Ihnen aus.</div><div class="grow"></div><div style="display:inline-flex;background:var(--color-ink);color:#fff;border-radius:1mm;padding:1mm 2mm;font-size:4.2pt;width:max-content" class="pl">Jetzt ausprobieren</div></div></div>
+      <h4 class="mt2">6 · Ankündigung</h4><p class="small">Ziegel-Fläche, Ink-Text. Nur für News &amp; Launches.</p>
+    </div>
+  </div>
+  <div class="card subtle mt6"><p class="small"><strong>Feste Elemente jeder Vorlage:</strong> 80 px Rand · Eyebrow in Geist Mono oben links · Headline in Plus Jakarta Sans Medium · Bildmarke oder Handle unten links · max. eine Ecke oder ein Marker pro Motiv · max. zwei Markenfarben + Foto.</p></div>
+</section>
+
+<section class="page" data-sec="11 Social Media">
+  <div class="eyebrow"><b>11</b> Social Media · Carousel &amp; Story</div>
+  <h2>Carousels erzählen eine Geschichte</h2>
+  <div style="display:flex;gap:3mm" class="mt2">
+    <div class="post" style="width:31mm;aspect-ratio:4/5;background:var(--color-ink);color:#fff"><div class="in"><div class="mono" style="font-size:3pt;color:var(--neutral-400)">1 / 7</div><div class="hl" style="font-size:9pt;margin-top:2mm">5 Fehler, die Ihr Exposé teuer machen.</div><div class="grow"></div><div class="pl" style="font-size:3.6pt;color:var(--color-ziegel)">Wischen →</div></div><div class="cornerfold"></div></div>
+    <div class="post" style="width:31mm;aspect-ratio:4/5;background:var(--color-sand)"><div class="in"><div class="mono" style="font-size:3pt;color:var(--neutral-600)">2 / 7</div><div style="font-weight:300;font-size:16pt;color:var(--color-ziegel);margin-top:1mm">01</div><div class="hl" style="font-size:6.5pt;margin-top:1mm">Energieausweis fehlt</div><div class="pl" style="font-size:3.6pt;color:var(--neutral-600);margin-top:1mm">Pflicht nach GEG – fehlende Angaben können ein Bußgeld kosten.</div></div></div>
+    <div class="post" style="width:31mm;aspect-ratio:4/5;background:var(--color-sand)"><div class="in"><div class="mono" style="font-size:3pt;color:var(--neutral-600)">3 / 7</div><div style="font-weight:300;font-size:16pt;color:var(--color-ziegel);margin-top:1mm">02</div><div class="hl" style="font-size:6.5pt;margin-top:1mm">Dunkle Titelbilder</div></div></div>
+    <div class="post" style="width:31mm;aspect-ratio:4/5;background:var(--color-sand)"><div class="in"><div class="mono" style="font-size:3pt;color:var(--neutral-600)">4–6 / 7</div><div style="font-weight:300;font-size:16pt;color:var(--color-ziegel);margin-top:1mm">…</div></div></div>
+    <div class="post" style="width:31mm;aspect-ratio:4/5;background:var(--color-ziegel)"><div class="in"><div class="mono" style="font-size:3pt">7 / 7</div><div class="hl" style="font-size:8pt;margin-top:2mm">Alle fünf vermeiden – automatisch.</div><div class="grow"></div><div style="display:inline-flex;background:var(--color-ink);color:#fff;border-radius:1mm;padding:.8mm 1.6mm;font-size:3.6pt;width:max-content" class="pl">Link in Bio</div></div></div>
+    <div style="width:4mm"></div>
+    <div class="post" style="width:28mm;aspect-ratio:9/16;background:var(--color-sand)"><div class="in" style="padding:14% 8% 20%"><div class="mono" style="font-size:3pt;color:var(--neutral-600)">UMFRAGE</div><div class="hl" style="font-size:8pt;margin-top:2mm">Wie lange brauchen Sie für ein Exposé?</div><div style="margin-top:3mm;background:#fff;border-radius:1mm;padding:1mm 1.5mm;font-size:4pt" class="pl">unter 1 Std.</div><div style="margin-top:1mm;background:#fff;border-radius:1mm;padding:1mm 1.5mm;font-size:4pt" class="pl">1–3 Std.</div><div style="margin-top:1mm;background:#fff;border-radius:1mm;padding:1mm 1.5mm;font-size:4pt" class="pl">mehr als 3 Std.</div></div></div>
+  </div>
+  <div class="g3 mt6">
+    <div><h4>Dramaturgie</h4><ul class="list small"><li><strong>Slide 1 – Hook:</strong> Problem oder Versprechen, Ink-Fläche, Ecke.</li><li><strong>Slides 2–n – Inhalt:</strong> ein Gedanke pro Slide, nummeriert.</li><li><strong>Letzter Slide – CTA:</strong> Ziegel-Fläche, eine Handlung.</li></ul></div>
+    <div><h4>Regeln</h4><ul class="list small"><li>5–8 Slides ideal, maximal 10.</li><li>Seitenzahl „2 / 7“ oben links in Mono.</li><li>„Wischen →“ auf Slide 1.</li><li>Visueller Faden: gleiche Position der Headline auf allen Slides.</li></ul></div>
+    <div><h4>Stories</h4><ul class="list small"><li>Interaktiv: Umfragen, Quiz, Fragen-Sticker.</li><li>Sicherheitszonen beachten.</li><li>Reels: Screen-Recording des Wizards mit Untertiteln (Geist, Ink auf Weiß, 48 px).</li><li>Erste 1,5 Sekunden entscheiden – sofort das Ergebnis zeigen.</li></ul></div>
+  </div>
+</section>
+
+<section class="page" data-sec="11 Social Media">
+  <div class="eyebrow"><b>11</b> Social Media · Content-Strategie</div>
+  <h2>Fünf Content-Säulen</h2>
+  <div class="g5 mt2">
+    <div class="card"><div class="num accent">30 %</div><h4 class="mt4">Transformation</h4><p class="small">Vorher/Nachher, „Aus dieser PDF wurde …“, Reels des Wizards.</p></div>
+    <div class="card"><div class="num accent">25 %</div><h4 class="mt4">Wissen</h4><p class="small">Tipps zu Exposés, Fotos, GEG-Pflichtangaben, Texten, Vermarktung.</p></div>
+    <div class="card"><div class="num accent">20 %</div><h4 class="mt4">Beweis</h4><p class="small">Kundenstimmen, Fallbeispiele, Ergebnisse (nur echte).</p></div>
+    <div class="card"><div class="num accent">15 %</div><h4 class="mt4">Produkt</h4><p class="small">Features, Updates, Neuigkeiten, kleine Anleitungen.</p></div>
+    <div class="card"><div class="num accent">10 %</div><h4 class="mt4">Menschen</h4><p class="small">Team, Gründergeschichte, Behind the Scenes, Branchen-Meinung.</p></div>
+  </div>
+  <div class="row mt6">
+    <div class="col">
+      <h3>Rhythmus <span class="ph">[an Ressourcen anpassen]</span></h3>
+      <table class="mt2">
+        <tr><th>Kanal</th><th>Frequenz</th></tr>
+        <tr><td>Instagram</td><td>3 Feed-Posts / Woche · Stories 3–5 / Woche · 1 Reel / Woche</td></tr>
+        <tr><td>LinkedIn</td><td>2–3 Posts / Woche (Unternehmen + Founder)</td></tr>
+        <tr><td>Facebook</td><td>2 Posts / Woche · Gruppen nach Bedarf</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h3>Aufbau einer Caption</h3>
+      <table class="mt2">
+        <tr><td>1 · Hook</td><td>Erste Zeile, max. 125 Zeichen, weckt Neugier</td></tr>
+        <tr><td>2 · Wert</td><td>2–5 kurze Absätze oder Aufzählung</td></tr>
+        <tr><td>3 · CTA</td><td>Eine Handlung: speichern, kommentieren, Link in Bio</td></tr>
+        <tr><td>4 · Hashtags</td><td>3–5 relevante: <span class="ph">[#immobilienmakler #exposé #immobilienmarketing …]</span></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 WERBUNG ============ -->
+<section class="page dark chapter" data-sec="12 Werbeanzeigen">
+  <div class="bignum">12</div>
+  <h1>Werbeanzeigen</h1>
+  <p class="lead mt4">Aufmerksamkeit in einer Sekunde, Klarheit in drei.</p>
+</section>
+
+<section class="page" data-sec="12 Werbeanzeigen">
+  <div class="eyebrow"><b>12</b> Werbeanzeigen · Formate</div>
+  <h2>Formate je Plattform</h2>
+  <div class="g3 mt2">
+    <div>
+      <h3>Meta (Instagram, Facebook)</h3>
+      <table class="mt2">
+        <tr><td>Feed</td><td class="mono">1080 × 1350 · 1080 × 1080</td></tr>
+        <tr><td>Stories / Reels</td><td class="mono">1080 × 1920</td></tr>
+        <tr><td>Carousel</td><td class="mono">1080 × 1080, 2–10 Karten</td></tr>
+        <tr><td>Primärtext</td><td>≤ 125 Zeichen sichtbar</td></tr>
+        <tr><td>Headline</td><td>≤ 40 Zeichen</td></tr>
+        <tr><td>Video</td><td>6–15 s, mit Untertiteln, ohne Ton verständlich</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>LinkedIn</h3>
+      <table class="mt2">
+        <tr><td>Single Image</td><td class="mono">1200 × 627 · 1200 × 1200</td></tr>
+        <tr><td>Vertikal</td><td class="mono">720 × 900</td></tr>
+        <tr><td>Dokument-Ad</td><td class="mono">PDF, 4:5</td></tr>
+        <tr><td>Einleitungstext</td><td>≤ 150 Zeichen sichtbar</td></tr>
+        <tr><td>Headline</td><td>≤ 70 Zeichen</td></tr>
+        <tr><td>Zielgruppe</td><td>Büroinhaber, Teamleiter (Abo)</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Google Display</h3>
+      <table class="mt2">
+        <tr><td>Medium Rectangle</td><td class="mono">300 × 250</td></tr>
+        <tr><td>Leaderboard</td><td class="mono">728 × 90</td></tr>
+        <tr><td>Skyscraper</td><td class="mono">160 × 600</td></tr>
+        <tr><td>Mobile Banner</td><td class="mono">320 × 50</td></tr>
+        <tr><td>Billboard</td><td class="mono">970 × 250</td></tr>
+        <tr><td>Responsive</td><td class="mono">1200 × 628 · 1200 × 1200 + Logo</td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="small muted mt4">Specs ändern sich regelmäßig – vor jeder Kampagne in den offiziellen Hilfeseiten der Plattformen prüfen. Suchanzeigen (Google Ads Text) folgen den Text-Regeln in Kapitel 04.</p>
+</section>
+
+<section class="page" data-sec="12 Werbeanzeigen">
+  <div class="eyebrow"><b>12</b> Werbeanzeigen · Anatomie</div>
+  <h2>Aufbau einer Anzeige</h2>
+  <div class="row mt2">
+    <div style="display:flex;gap:6mm">
+      <div class="post" style="width:58mm;aspect-ratio:4/5;background:var(--color-sand)">
+        <div class="in">
+          <div class="mono" style="font-size:5pt;letter-spacing:.08em;color:var(--neutral-600)">FÜR IMMOBILIENMAKLER</div>
+          <div class="hl" style="font-size:15pt;margin-top:3mm">Exposé in <span class="marker">10 Minuten.</span></div>
+          <div class="pl" style="font-size:6pt;color:var(--neutral-600);margin-top:2mm">PDF hochladen, Stil wählen, fertig. Zahlen erst beim Download.</div>
+          <div style="flex:1;margin-top:3mm;position:relative">
+            <div class="a4" style="position:absolute;left:8%;top:6%;height:88%"><div class="photo" style="height:48%"></div><div style="padding:1.5mm"><div style="height:1.4mm;width:70%;background:var(--color-ink)"></div><div style="height:.8mm;width:50%;background:var(--neutral-300);margin-top:1mm"></div></div><div class="cornerfold"></div></div>
+            <div class="a4" style="position:absolute;left:44%;top:0;height:88%"><div style="padding:1.5mm"><div style="height:1mm;width:50%;background:var(--color-ink)"></div></div><div style="margin:0 1.5mm;height:40%;background:#E9EEF2"></div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:2mm"><div style="display:flex;align-items:center;gap:1mm"><svg viewBox="0 0 24 32" style="height:3.5mm"><use href="#mark"/></svg><span style="font-size:5.5pt;font-weight:600;letter-spacing:-0.03em">expose<span style="color:var(--color-ziegel)">.</span>ai</span></div><div class="pl" style="background:var(--color-ink);color:#fff;border-radius:1mm;padding:1mm 2mm;font-size:4.6pt">Kostenlos starten</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <table>
+        <tr><th style="width:26%">Element</th><th>Regel</th></tr>
+        <tr><td>1 · Eyebrow</td><td>Zielgruppe ansprechen („Für Immobilienmakler“). Selektiert sofort.</td></tr>
+        <tr><td>2 · Headline</td><td>Ein Versprechen, max. 6 Wörter. Ein Wort mit Marker.</td></tr>
+        <tr><td>3 · Subline</td><td>Wie es geht + Risikoumkehr. Max. 15 Wörter.</td></tr>
+        <tr><td>4 · Visual</td><td>Echtes Exposé oder Vorher/Nachher. Nimmt 40–60 % der Fläche ein.</td></tr>
+        <tr><td>5 · Absender</td><td>Logo unten links, immer sichtbar.</td></tr>
+        <tr><td>6 · CTA</td><td>Ink-Button, ein Verb: „Kostenlos starten“, „Exposé erstellen“.</td></tr>
+      </table>
+      <div class="card subtle mt4"><h4>Die 3-Sekunden-Probe</h4><p class="small">Zeigen Sie die Anzeige jemandem drei Sekunden lang. Kann die Person sagen, <strong>was</strong> angeboten wird und <strong>für wen</strong>? Wenn nicht: Text kürzen, Visual vereinfachen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="12 Werbeanzeigen">
+  <div class="eyebrow"><b>12</b> Werbeanzeigen · Botschaften</div>
+  <h2>Headline-Formeln &amp; Testmatrix</h2>
+  <div class="row mt2">
+    <div class="col">
+      <table>
+        <tr><th>Formel</th><th>Beispiel</th></tr>
+        <tr><td>Ergebnis + Zeit</td><td>„Exposé in 10 Minuten.“</td></tr>
+        <tr><td>Problem → Lösung</td><td>„Schluss mit Exposés in Word.“</td></tr>
+        <tr><td>Risikoumkehr</td><td>„Erst sehen. Dann zahlen.“</td></tr>
+        <tr><td>Vergleich / Anker</td><td>„Agenturqualität. Ab 30 €.“</td></tr>
+        <tr><td>Frage</td><td>„Wie viele Abende kostet Ihr nächstes Exposé?“</td></tr>
+        <tr><td>Identität</td><td>„Für Makler, die lieber verkaufen als layouten.“</td></tr>
+        <tr><td>Feature-Nutzen</td><td>„Die Lageanalyse schreibt sich selbst.“</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h3>Testmatrix</h3>
+      <p class="small">Immer nur <strong>eine Variable</strong> pro Test ändern. Mindestens 3 Varianten pro Kampagne.</p>
+      <table class="mt2">
+        <tr><th>Variable</th><th>Varianten</th></tr>
+        <tr><td>Hook</td><td>Zeit · Geld · Qualität · Sicherheit</td></tr>
+        <tr><td>Visual</td><td>Vorher/Nachher · fertiges Exposé · Screen-Recording · Mensch</td></tr>
+        <tr><td>Fläche</td><td>Sand · Ink · Ziegel · Foto</td></tr>
+        <tr><td>CTA</td><td>„Kostenlos starten“ · „Exposé erstellen“ · „Beispiel ansehen“</td></tr>
+      </table>
+      <h3 class="mt6">Funnel-Stufen</h3>
+      <table class="mt2">
+        <tr><td>Kalt</td><td>Transformation, Problem. CTA: „Beispiel ansehen“.</td></tr>
+        <tr><td>Warm</td><td>Features, Beweise. CTA: „Kostenlos starten“.</td></tr>
+        <tr><td>Retargeting</td><td>„Ihr Entwurf wartet“, Abo-Vorteile, Kundenstimmen.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="12 Werbeanzeigen">
+  <div class="eyebrow"><b>12</b> Werbeanzeigen · Recht &amp; Qualität</div>
+  <h2>Werbung, der man vertrauen kann</h2>
+  <div class="g2 mt2">
+    <div>
+      <h3>Pflicht</h3>
+      <ul class="list">
+        <li><strong>Wahrheit:</strong> Jede Zahl („10 Minuten“, „3 Std. gespart“) muss belegbar sein. Belege intern dokumentieren.</li>
+        <li><strong>Preise:</strong> Gegenüber Verbrauchern Gesamtpreise inkl. MwSt. (PAngV). B2B: Hinweis „zzgl. MwSt.“ <span class="ph">[rechtlich prüfen]</span></li>
+        <li><strong>Kundenstimmen:</strong> nur echt, mit schriftlicher Freigabe, nicht bearbeitet.</li>
+        <li><strong>Vergleiche:</strong> Vergleichende Werbung nur sachlich, nachprüfbar und ohne Herabsetzung (UWG § 6).</li>
+        <li><strong>Bildrechte:</strong> Für jedes Foto Lizenz bzw. Model Release.</li>
+        <li><strong>Kennzeichnung:</strong> Influencer- und Partner-Inhalte als Werbung kennzeichnen.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Verboten</h3>
+      <ul class="list">
+        <li>Erfundene Kundenstimmen, Bewertungen oder Logos</li>
+        <li>Fake-Countdowns und künstliche Verknappung („Nur noch heute!“)</li>
+        <li>„Kostenlos“, wenn Kosten versteckt sind – immer klar: „kostenlos starten, zahlen beim Download“</li>
+        <li>Clickbait, der nicht eingelöst wird</li>
+        <li>Herabsetzung von Wettbewerbern oder Maklern</li>
+        <li>Fremde Marken oder Logos ohne Erlaubnis</li>
+      </ul>
+      <div class="card subtle mt6"><p class="small">Diese Übersicht ersetzt keine Rechtsberatung. Kampagnen mit Preis- oder Vergleichsaussagen vor dem Start juristisch prüfen lassen. <span class="ph">[Ansprechpartner Recht]</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 BEWEGUNG ============ -->
+<section class="page" data-sec="13 Bewegung">
+  <div class="eyebrow"><b>13</b> Bewegung</div>
+  <h2>Ruhig, zielgerichtet, kurz</h2>
+  <div class="row mt2">
+    <div class="col">
+      <table>
+        <tr><th>Token</th><th>Wert</th><th>Einsatz</th></tr>
+        <tr><td>duration-fast</td><td class="mono">120 ms</td><td>Hover, Farbe, Fokus</td></tr>
+        <tr><td>duration-base</td><td class="mono">200 ms</td><td>Dropdowns, Tabs, Toggles</td></tr>
+        <tr><td>duration-slow</td><td class="mono">320 ms</td><td>Modals, Panels, Seitenwechsel im Wizard</td></tr>
+        <tr><td>duration-reveal</td><td class="mono">600 ms</td><td>Scroll-Einblendungen Website</td></tr>
+        <tr><td>ease-out</td><td class="mono">cubic-bezier(.22,1,.36,1)</td><td>Standard für alles, was erscheint</td></tr>
+        <tr><td>ease-in-out</td><td class="mono">cubic-bezier(.65,0,.35,1)</td><td>Bewegungen von A nach B</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h3>Prinzipien</h3>
+      <ul class="list">
+        <li><strong>Bedeutung vor Effekt:</strong> Bewegung zeigt Ursache und Wirkung, z. B. wie ein Feld aus der PDF in die Vorschau „fließt“.</li>
+        <li><strong>Das Produkt lebt:</strong> Felder füllen sich nacheinander, Pins erscheinen auf der Karte, Seiten blättern um.</li>
+        <li><strong>Die Ecke klappt:</strong> Signatur-Animation – die Ecke des Logos klappt um (Ladezustand, Intro von Videos, Erfolg nach Download).</li>
+        <li><strong>Keine</strong> Bounces, Wackeln, Parallax-Orgien oder Endlosschleifen.</li>
+        <li><strong>Barrierefreiheit:</strong> <span class="mono">prefers-reduced-motion</span> respektieren.</li>
+      </ul>
+      <h3 class="mt4">Video &amp; Reels</h3>
+      <p class="small">Schnitte auf den Takt, Untertitel immer an, Logo-Outro 1 s (Ecke klappt). Musik ruhig-modern, keine Stock-Jingles. <span class="ph">[Musikbibliothek / Lizenz festlegen]</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 UI ============ -->
+<section class="page" data-sec="14 Produkt-UI">
+  <div class="eyebrow"><b>14</b> Produkt-UI Kurzreferenz</div>
+  <h2>Die wichtigsten Bausteine</h2>
+  <div class="g3 mt2">
+    <div class="card">
+      <h4>Buttons</h4>
+      <div style="display:flex;gap:2mm;flex-wrap:wrap" class="mt2"><span class="btn pri">Jetzt Exposé erstellen</span><span class="btn sec">Beispiel ansehen</span></div>
+      <p class="small mt4">Primär immer Ink, genau einer pro Bereich. Sekundär weiß mit Linie. Höhe 36 px (Hero 40 px), Radius 8 px, Geist Medium 14 px. Ziegel-Buttons nur in Social/Ads.</p>
+    </div>
+    <div class="card">
+      <h4>Schrittleiste Wizard</h4>
+      <div style="display:flex;gap:1.5mm;align-items:center" class="mt2">
+        <span class="step" style="background:var(--color-ink);color:#fff">✓</span><span style="width:4mm;height:1px;background:var(--color-ink)"></span>
+        <span class="step" style="background:var(--color-ink);color:#fff;box-shadow:0 0 0 2px #fff,0 0 0 3.5px var(--color-ziegel)">2</span><span style="width:4mm;height:1px;background:var(--neutral-300)"></span>
+        <span class="step" style="border:1px solid var(--neutral-300);position:relative">3<span style="position:absolute;top:-.5mm;right:-.5mm;width:2mm;height:2mm;border-radius:50%;background:var(--color-warning)"></span></span><span style="width:4mm;height:1px;background:var(--neutral-300)"></span>
+        <span class="step" style="border:1px solid var(--neutral-300)">4</span>
+      </div>
+      <p class="small mt4">Erledigt: Ink + Haken. Aktiv: Ink + Ziegel-Ring. Offen: weiß mit Linie. Pflichtangabe fehlt: Warnpunkt. Alle Kreise klickbar.</p>
+    </div>
+    <div class="card">
+      <h4>Eingabefeld</h4>
+      <div class="mt2 small" style="font-weight:500">Wohnfläche *</div>
+      <div style="height:9mm;border:1px solid var(--neutral-200);border-radius:8px;display:flex;align-items:center;padding:0 3mm;justify-content:space-between;margin-top:1mm;box-shadow:0 0 0 3px var(--color-info-bg)"><span>85</span><span class="muted">m²</span></div>
+      <div class="small mt2" style="color:var(--color-info)">Automatisch aus PDF erkannt</div>
+      <p class="small mt2">Label immer sichtbar über dem Feld. Hilfe- und Fehlertext direkt darunter.</p>
+    </div>
+    <div class="card">
+      <h4>Status-Badges</h4>
+      <div style="display:flex;gap:2mm;flex-wrap:wrap" class="mt2">
+        <span class="tag">● Entwurf</span><span class="tag do">● Gekauft</span><span class="tag" style="background:var(--color-warning-bg);color:var(--color-warning);border-color:transparent">1 Bearbeitung übrig</span>
+      </div>
+      <p class="small mt4">Punkt + Text, nie nur Farbe. Radius full, Geist Mono 11 px.</p>
+    </div>
+    <div class="card">
+      <h4>Vorschau-Bühne</h4>
+      <div style="background:var(--surface-stage);border-radius:var(--radius-l);height:22mm;display:flex;align-items:center;justify-content:center;gap:2mm" class="mt2"><div class="a4" style="height:18mm"><div class="photo" style="height:45%"></div></div><div class="a4" style="height:18mm"></div></div>
+      <p class="small mt2">Neutral-100-Fläche, A4-Seiten weiß mit shadow-page, Wasserzeichen diagonal in Neutral 300 bis zum Kauf.</p>
+    </div>
+    <div class="card">
+      <h4>Fokus &amp; Barrierefreiheit</h4>
+      <p class="small mt2">Fokusring 2 px Ziegel mit 2 px Abstand. Klickflächen min. 44 × 44 px. Kontraste nach Kapitel 06. Alle Funktionen per Tastatur erreichbar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15 TOKENS ============ -->
+<section class="page" data-sec="15 Design Tokens">
+  <div class="eyebrow"><b>15</b> Design Tokens · Farben &amp; Typografie</div>
+  <h2>Die Quelle der Wahrheit</h2>
+  <p class="small" style="margin-top:-3mm">Maschinenlesbar in <span class="mono">brand/tokens.css</span> und <span class="mono">brand/tokens.json</span>. Bei Abweichungen gilt die Datei.</p>
+  <div class="row mt4" style="gap:6mm">
+    <div class="col">
+      <table style="font-size:7.6pt">
+        <tr><th>Token</th><th>Wert</th></tr>
+        <tr><td class="mono">--color-ink</td><td class="mono">#141518</td></tr>
+        <tr><td class="mono">--color-paper</td><td class="mono">#FFFFFF</td></tr>
+        <tr><td class="mono">--color-sand</td><td class="mono">#F4EFE6</td></tr>
+        <tr><td class="mono">--color-ziegel</td><td class="mono">#E9562C</td></tr>
+        <tr><td class="mono">--text-primary</td><td class="mono">neutral-950</td></tr>
+        <tr><td class="mono">--text-secondary</td><td class="mono">neutral-600</td></tr>
+        <tr><td class="mono">--text-tertiary</td><td class="mono">neutral-500</td></tr>
+        <tr><td class="mono">--text-accent</td><td class="mono">ziegel-600</td></tr>
+        <tr><td class="mono">--surface-subtle</td><td class="mono">neutral-50</td></tr>
+        <tr><td class="mono">--surface-stage</td><td class="mono">neutral-100</td></tr>
+        <tr><td class="mono">--surface-inverse</td><td class="mono">neutral-950</td></tr>
+        <tr><td class="mono">--border-hairline</td><td class="mono">neutral-200</td></tr>
+        <tr><td class="mono">--action-primary</td><td class="mono">neutral-950</td></tr>
+        <tr><td class="mono">--focus-ring</td><td class="mono">ziegel-500</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <table style="font-size:7.6pt">
+        <tr><th>Token</th><th>Wert</th></tr>
+        <tr><td class="mono">--font-display</td><td class="mono">Plus Jakarta Sans</td></tr>
+        <tr><td class="mono">--font-text</td><td class="mono">Geist</td></tr>
+        <tr><td class="mono">--font-mono</td><td class="mono">Geist Mono</td></tr>
+        <tr><td class="mono">--text-display-2xl</td><td class="mono">72px</td></tr>
+        <tr><td class="mono">--text-display-xl</td><td class="mono">56px</td></tr>
+        <tr><td class="mono">--text-display-l</td><td class="mono">48px</td></tr>
+        <tr><td class="mono">--text-display-m</td><td class="mono">36px</td></tr>
+        <tr><td class="mono">--text-title-l</td><td class="mono">24px</td></tr>
+        <tr><td class="mono">--text-title-m</td><td class="mono">20px</td></tr>
+        <tr><td class="mono">--text-body-l</td><td class="mono">16px</td></tr>
+        <tr><td class="mono">--text-body-m</td><td class="mono">14px</td></tr>
+        <tr><td class="mono">--text-body-s</td><td class="mono">12px</td></tr>
+        <tr><td class="mono">--text-caption</td><td class="mono">11px</td></tr>
+        <tr><td class="mono">--weight-*</td><td class="mono">300 · 400 · 500 · 600</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <table style="font-size:7.6pt">
+        <tr><th>Token</th><th>Wert</th></tr>
+        <tr><td class="mono">--color-success</td><td class="mono">#1F9D55</td></tr>
+        <tr><td class="mono">--color-warning</td><td class="mono">#D97706</td></tr>
+        <tr><td class="mono">--color-error</td><td class="mono">#DC2626</td></tr>
+        <tr><td class="mono">--color-info</td><td class="mono">#2563EB</td></tr>
+        <tr><td class="mono">--cat-einkaufen</td><td class="mono">#F59E0B</td></tr>
+        <tr><td class="mono">--cat-oepnv</td><td class="mono">#2563EB</td></tr>
+        <tr><td class="mono">--cat-bildung</td><td class="mono">#7C3AED</td></tr>
+        <tr><td class="mono">--cat-gesundheit</td><td class="mono">#DC2626</td></tr>
+        <tr><td class="mono">--cat-sport</td><td class="mono">#0EA5A4</td></tr>
+        <tr><td class="mono">--cat-gastronomie</td><td class="mono">#DB2777</td></tr>
+        <tr><td class="mono">--cat-natur</td><td class="mono">#16A34A</td></tr>
+        <tr><td class="mono">--neutral-0…950</td><td class="mono">13 Stufen (S. 20)</td></tr>
+        <tr><td class="mono">--ziegel-50…900</td><td class="mono">10 Stufen (S. 20)</td></tr>
+        <tr><td class="mono">--sand-50…400</td><td class="mono">5 Stufen (S. 20)</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-sec="15 Design Tokens">
+  <div class="eyebrow"><b>15</b> Design Tokens · Raum, Form, Bewegung, Layout</div>
+  <h2>Weitere Tokens</h2>
+  <div class="row mt2" style="gap:6mm">
+    <div class="col">
+      <table style="font-size:7.6pt">
+        <tr><th>Abstände</th><th>Wert</th></tr>
+        <tr><td class="mono">--space-0-5</td><td class="mono">2px</td></tr>
+        <tr><td class="mono">--space-1 / 2 / 3</td><td class="mono">4 / 8 / 12px</td></tr>
+        <tr><td class="mono">--space-4 / 5 / 6</td><td class="mono">16 / 20 / 24px</td></tr>
+        <tr><td class="mono">--space-8 / 10 / 12</td><td class="mono">32 / 40 / 48px</td></tr>
+        <tr><td class="mono">--space-16 / 20 / 24</td><td class="mono">64 / 80 / 96px</td></tr>
+        <tr><td class="mono">--space-32 / 40 / 50</td><td class="mono">128 / 160 / 200px</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <table style="font-size:7.6pt">
+        <tr><th>Form</th><th>Wert</th></tr>
+        <tr><td class="mono">--radius-xs / s / m</td><td class="mono">2 / 4 / 6px</td></tr>
+        <tr><td class="mono">--radius-l / xl / 2xl</td><td class="mono">8 / 10 / 16px</td></tr>
+        <tr><td class="mono">--radius-full</td><td class="mono">9999px</td></tr>
+        <tr><td class="mono">--border-width</td><td class="mono">1px / 1.5px</td></tr>
+        <tr><td class="mono">--shadow-xs … l</td><td class="mono">4 Stufen (S. 31)</td></tr>
+        <tr><td class="mono">--shadow-page</td><td class="mono">A4-Vorschau</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <table style="font-size:7.6pt">
+        <tr><th>Bewegung &amp; Layout</th><th>Wert</th></tr>
+        <tr><td class="mono">--duration-fast/base/slow</td><td class="mono">120 / 200 / 320ms</td></tr>
+        <tr><td class="mono">--duration-reveal</td><td class="mono">600ms</td></tr>
+        <tr><td class="mono">--ease-out</td><td class="mono">(.22,1,.36,1)</td></tr>
+        <tr><td class="mono">--container-max</td><td class="mono">1360px</td></tr>
+        <tr><td class="mono">--gutter-desktop/tab/mob</td><td class="mono">40 / 32 / 20px</td></tr>
+        <tr><td class="mono">--grid-columns / gap</td><td class="mono">12 / 24px</td></tr>
+        <tr><td class="mono">--nav-height</td><td class="mono">56px</td></tr>
+        <tr><td class="mono">--bp-sm…2xl</td><td class="mono">640 · 768 · 1024 · 1280 · 1440</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="card subtle mt6">
+    <h4>Social-Tokens (Canvas 1080 px)</h4>
+    <p class="small">Rand 80 px · Raster 6 Spalten / 24 px · Headline 64–120 px · Fließtext ≥ 32 px · Minimum 24 px · Radius Karten 16 px · Ecke 12–18 % der kürzeren Seite · Logo-Bildmarke 48–64 px hoch.</p>
+  </div>
+</section>
+
+<!-- ============ 16 CHECKLISTEN ============ -->
+<section class="page" data-sec="16 Checklisten">
+  <div class="eyebrow"><b>16</b> Checklisten</div>
+  <h2>Vor jeder Veröffentlichung</h2>
+  <div class="g3 mt2">
+    <div class="card">
+      <h3>Social-Post</h3>
+      <ul class="list small mt2">
+        <li>Richtiges Format und Sicherheitszonen</li>
+        <li>80 px Rand eingehalten</li>
+        <li>Max. 2 Markenfarben + Foto</li>
+        <li>Headline ≤ 10 Wörter, ≥ 64 px</li>
+        <li>Max. ein Marker / eine Ecke</li>
+        <li>Logo oder Handle sichtbar</li>
+        <li>Sie-Ansprache, Schreibregeln</li>
+        <li>Zahlen belegt, Bildrechte geklärt</li>
+        <li>Caption: Hook, Wert, CTA, Hashtags</li>
+        <li>Alt-Text hinterlegt</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Werbeanzeige</h3>
+      <ul class="list small mt2">
+        <li>Besteht die 3-Sekunden-Probe</li>
+        <li>Zielgruppe in der Eyebrow</li>
+        <li>Ein Versprechen, ein CTA</li>
+        <li>Visual = echtes Produkt / Exposé</li>
+        <li>Preisangaben korrekt (MwSt.)</li>
+        <li>Keine Fake-Verknappung</li>
+        <li>Varianten für A/B-Test angelegt</li>
+        <li>Landingpage passt zur Botschaft</li>
+        <li>Alle Formate der Plattform erstellt</li>
+        <li>Rechtlich geprüft (bei Preis/Vergleich)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Produkt &amp; Website</h3>
+      <ul class="list small mt2">
+        <li>Nur Tokens, keine freien Werte</li>
+        <li>Primär-Button Ink, nur einer pro Bereich</li>
+        <li>Kontraste AA oder besser</li>
+        <li>Fokuszustände sichtbar</li>
+        <li>Klickflächen ≥ 44 px</li>
+        <li>Texte nach Tonalität geprüft</li>
+        <li>Fehlermeldungen mit Lösung</li>
+        <li>Mobil getestet (390 px)</li>
+        <li>reduced-motion berücksichtigt</li>
+        <li>Plus Jakarta Sans nur für Display</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFENE PUNKTE + ENDE ============ -->
+<section class="page" data-sec="Offene Punkte">
+  <div class="eyebrow">Offene Punkte</div>
+  <h2>Was noch festgelegt werden muss</h2>
+  <div class="g2 mt2">
+    <table>
+      <tr><th>Thema</th><th>Status</th></tr>
+      <tr><td>Finaler Produktname</td><td><span class="ph">offen</span> – Logo bis dahin Arbeitsentwurf</td></tr>
+      <tr><td>Logo als Vektordatei</td><td><span class="ph">offen</span> – nach Namensfindung</td></tr>
+      <tr><td>Social-Handles</td><td><span class="ph">Verfügbarkeit prüfen</span></td></tr>
+      <tr><td>Personas</td><td><span class="ph">durch Interviews validieren</span></td></tr>
+      <tr><td>Kennzahlen für Werbung</td><td><span class="ph">messen &amp; belegen</span></td></tr>
+      <tr><td>Kundenstimmen</td><td><span class="ph">nach ersten Kunden sammeln</span></td></tr>
+    </table>
+    <table>
+      <tr><th>Thema</th><th>Status</th></tr>
+      <tr><td>Preise inkl. / zzgl. MwSt.</td><td><span class="ph">rechtlich klären</span></td></tr>
+      <tr><td>Gender-Regel</td><td><span class="ph">festlegen</span></td></tr>
+      <tr><td>Bildquelle / Fotograf</td><td><span class="ph">festlegen</span></td></tr>
+      <tr><td>Musikbibliothek für Video</td><td><span class="ph">festlegen</span></td></tr>
+      <tr><td>Hashtag-Set</td><td><span class="ph">recherchieren</span></td></tr>
+      <tr><td>Kanal-Prioritäten (YouTube, TikTok)</td><td><span class="ph">klären</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="page dark" style="justify-content:space-between">
+  <div class="logo inv" style="font-size:22pt"><svg viewBox="0 0 24 32"><use href="#mark"/></svg><span>expose<span class="dot">.</span>ai</span></div>
+  <div>
+    <h1 style="font-size:52pt;max-width:220mm">Konsistenz ist die stärkste Kampagne.</h1>
+    <p class="lead mt6">Fragen zur Marke, Freigaben und neue Vorlagen: <span class="ph">[Ansprechpartner Marke, E-Mail]</span></p>
+  </div>
+  <div class="mono" style="font-size:8pt;color:var(--neutral-400);letter-spacing:.05em;text-transform:uppercase">Brand Guidelines v1.0 · Oktober 2026 · Quelle: brand/brand-guidelines.html</div>
+  <div style="position:absolute;bottom:0;right:0;width:46mm;height:46mm;background:var(--color-ziegel);clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+</section>
+
+<script>
+  // Seitenfuß mit Kapitel + Seitenzahl
+  document.querySelectorAll('.page').forEach((p, i) => {
+    if (i === 0 || p.classList.contains('chapter') || i === document.querySelectorAll('.page').length - 1) return;
+    const f = document.createElement('div');
+    f.className = 'foot';
+    f.innerHTML = `<span>expose.ai · Brand Guidelines</span><span>${p.dataset.sec || ''}</span><span>${String(i + 1).padStart(2, '0')}</span>`;
+    p.appendChild(f);
+  });
+</script>
+</body>
+</html>
